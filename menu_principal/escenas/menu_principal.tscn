@@ -1,0 +1,1866 @@
+[gd_scene load_steps=87 format=3 uid="uid://55igb40nemyi"]
+
+[ext_resource type="Texture2D" uid="uid://br2u4v13eoiwg" path="res://menu_principal/assets/fondointro1.png" id="2_pcw2w"]
+[ext_resource type="Texture2D" uid="uid://bfau8vw8vt8v3" path="res://menu_principal/assets/animacion_llave/llave2.png" id="3_1tcsx"]
+[ext_resource type="Script" uid="uid://cvlhc8abwa74n" path="res://menu_principal/scripts/menu_principal.gd" id="3_kncsj"]
+[ext_resource type="Texture2D" uid="uid://uxlrl00ph2cq" path="res://menu_principal/assets/animacion_llave/llave2-animacion-1.png" id="4_lqlrd"]
+[ext_resource type="Texture2D" uid="uid://bx5j3r6yyqux0" path="res://menu_principal/assets/animacion_llave/llave2-animacion2.png" id="5_qhojp"]
+[ext_resource type="Texture2D" uid="uid://ch64rjkdm4bao" path="res://menu_principal/assets/animacion_llave/llave2-animacion3.png" id="6_a7wx0"]
+[ext_resource type="Texture2D" uid="uid://jj62eorqpdi0" path="res://menu_principal/assets/animacion_llave/llave2-animacion4.png" id="7_j5wwn"]
+[ext_resource type="Texture2D" uid="uid://ewevbb8tx467" path="res://menu_principal/assets/animacion_llave/llave2-animacion5.png" id="8_rna57"]
+[ext_resource type="Texture2D" uid="uid://c133bucgj1nfl" path="res://menu_principal/assets/animacion_llave/llave2-animacion6.png" id="9_m6bpj"]
+[ext_resource type="Texture2D" uid="uid://hlx1j20uyu5x" path="res://menu_principal/assets/animacion_llave/llave2-animacion7.png" id="10_n881y"]
+[ext_resource type="Texture2D" uid="uid://cmfmly4p6t87v" path="res://menu_principal/assets/animacion_llave/llave2-animacion8.png" id="11_tiam4"]
+[ext_resource type="Texture2D" uid="uid://bs6oucfqxtqih" path="res://menu_principal/assets/animacion_llave/llave2-animacion9.png" id="12_yd0ce"]
+[ext_resource type="Texture2D" uid="uid://bsgiigjk0thtd" path="res://menu_principal/assets/animacion_llave/llave2-animacion10.png" id="13_hly2k"]
+[ext_resource type="Texture2D" uid="uid://dhvqgp5mr7vfc" path="res://menu_principal/assets/animacion_llave/llave2-animacion11.png" id="14_x1h6d"]
+[ext_resource type="Texture2D" uid="uid://bxlp6fkfni2yr" path="res://menu_principal/assets/animacion_llave/llave2-animacion12.png" id="15_wmhfo"]
+[ext_resource type="Texture2D" uid="uid://dnvoq4y8ptb3q" path="res://menu_principal/assets/animacion_llave/llave2-animacion13.png" id="16_krh45"]
+[ext_resource type="Texture2D" uid="uid://whl8nxbg18yq" path="res://menu_principal/assets/animacion_llave/llave2-animacion14.png" id="17_ay2fq"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="18_lqlrd"]
+[ext_resource type="Texture2D" uid="uid://666bl0oh107e" path="res://menu_principal/assets/captura_cartas1.png" id="19_m2qp4"]
+[ext_resource type="AudioStream" uid="uid://toaa4fsqlm7x" path="res://menu_principal/assets/sonidos/gentle-ocean-waves-mix-2018-19693.mp3" id="20_a7wx0"]
+[ext_resource type="Texture2D" uid="uid://cmi2sfcg3ffhm" path="res://menu_principal/assets/captura_cartas1-hover.png" id="20_k02xs"]
+[ext_resource type="Texture2D" uid="uid://bcwqryolr7ha0" path="res://menu_principal/assets/interrogacion2.png" id="21_03ivo"]
+[ext_resource type="AudioStream" uid="uid://bl3sihjj65ul5" path="res://menu_principal/assets/sonidos/Blind Faith ☮ Sea of Joy [FZQXvUeHmjQ].mp3" id="21_j5wwn"]
+[ext_resource type="Texture2D" uid="uid://ddoea21fut7i4" path="res://menu_principal/assets/interrogacion2-hover.png" id="22_6hp8b"]
+[ext_resource type="VideoStream" uid="uid://byh8ms5ddawgw" path="res://general/assets/intro-final.ogv" id="22_hly2k"]
+[ext_resource type="PackedScene" uid="uid://dbjavd8yv5cjf" path="res://general/escenas/configuracion.tscn" id="22_rna57"]
+[ext_resource type="Texture2D" uid="uid://cc6otertbxvwd" path="res://menu_principal/assets/captura_zombies1.png" id="23_3hxar"]
+[ext_resource type="FontFile" uid="uid://cwrh1xg8buxoe" path="res://general/assets/Yulong-Regular.otf" id="23_ykh68"]
+[ext_resource type="Texture2D" uid="uid://tify5ncnqr3g" path="res://menu_principal/assets/captura_zombies1-hover.png" id="24_88ocs"]
+[ext_resource type="Texture2D" uid="uid://bck7xwsa2c04l" path="res://general/assets/panel_dificultad.png" id="24_n881y"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="25_tiam4"]
+[ext_resource type="Texture2D" uid="uid://ugshiealmg1s" path="res://menu_principal/assets/interrogacion.png" id="26_yd0ce"]
+[ext_resource type="Texture2D" uid="uid://clqyu6ed73db3" path="res://menu_principal/assets/completado1-ajustado.png" id="26_ykh68"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="27_hly2k"]
+[ext_resource type="Texture2D" uid="uid://doxsg5ga7e0r2" path="res://menu_principal/assets/captura_runner1_corregida.png" id="28_61548"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="28_wmhfo"]
+[ext_resource type="Texture2D" uid="uid://csfksn4bptmue" path="res://general/assets/titulo1-horizontal-coloreado-ajustado.png" id="28_x1h6d"]
+[ext_resource type="Texture2D" uid="uid://6ok2huikfgq8" path="res://menu_principal/assets/captura_runner1-corregida-hover.png" id="29_6w4m1"]
+[ext_resource type="Texture2D" uid="uid://batj43b67lnim" path="res://general/assets/animacion mar intro/1.png" id="29_88ocs"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="29_krh45"]
+[ext_resource type="Texture2D" uid="uid://diophofkutrb2" path="res://general/assets/animacion mar intro/2.png" id="30_kht1s"]
+[ext_resource type="AudioStream" uid="uid://bo67na0q2sa8f" path="res://general/assets/sonido/menu-selection-102220.mp3" id="31_ay2fq"]
+[ext_resource type="Texture2D" uid="uid://d1ax84v11hese" path="res://general/assets/animacion mar intro/3.png" id="31_kddk1"]
+[ext_resource type="Texture2D" uid="uid://g73ha8lefx1v" path="res://menu_principal/assets/cofre1-base-probando-abierto-probando.png" id="32_5qpga"]
+[ext_resource type="Texture2D" uid="uid://ccvol7mput0g5" path="res://general/assets/animacion mar intro/4.png" id="32_h1ar6"]
+[ext_resource type="Texture2D" uid="uid://c6c7eacw0cvpq" path="res://menu_principal/assets/SPOILER.png" id="32_o8cpa"]
+[ext_resource type="Texture2D" uid="uid://c6pjkh2a58gqr" path="res://menu_principal/assets/cofre1-base-probando-ajustado.png" id="33_m1tiv"]
+[ext_resource type="Texture2D" uid="uid://ke8u8u0tt0e5" path="res://general/assets/animacion mar intro/5.png" id="33_osct8"]
+[ext_resource type="Texture2D" uid="uid://bkfao7u17urjq" path="res://menu_principal/assets/cofre1-base-probando-con_llaves-ajustado.png" id="34_q1o76"]
+[ext_resource type="AudioStream" uid="uid://c3wdq4y8gef7h" path="res://menu_principal/assets/sonidos/dorm-door-opening-6038.mp3" id="35_s2n4x"]
+[ext_resource type="AudioStream" uid="uid://dyt6swsu4w0c3" path="res://menu_principal/assets/sonidos/key-twist-in-lock-47832.mp3" id="36_0wand"]
+[ext_resource type="Texture2D" uid="uid://csi4pgfobrkbw" path="res://menu_principal/assets/interrogacion_hover.png" id="38_kddk1"]
+[ext_resource type="AudioStream" uid="uid://cicyjhl0n1gw5" path="res://general/assets/sonido/wronganswer-37702.mp3" id="42_kht1s"]
+[ext_resource type="Texture2D" uid="uid://xkdsj8bh2wuc" path="res://general/assets/boton_base2_dificil.png" id="44_7mull"]
+[ext_resource type="AudioStream" uid="uid://bsiogkhcyeqts" path="res://menu_principal/assets/sonidos/warning-notification-call-184996.mp3" id="44_h1ar6"]
+[ext_resource type="AudioStream" uid="uid://hd6the6vuymg" path="res://general/assets/sonido/on-001-337979.mp3" id="45_wb33y"]
+[ext_resource type="Texture2D" uid="uid://b8alrfl54be6e" path="res://general/assets/boton_base2_facil.png" id="46_y5mb2"]
+[ext_resource type="AudioStream" uid="uid://dwot1te8aci1s" path="res://menu_principal/assets/sonidos/door-close-79921.mp3" id="55_6w4m1"]
+[ext_resource type="Texture2D" uid="uid://k3r2c4f55r4e" path="res://menu_principal/assets/trofeo1-probando-ajustado.png" id="55_pq3jr"]
+[ext_resource type="Texture2D" uid="uid://wicqrs0ug28f" path="res://menu_principal/assets/trofeo1-probando-ajustado-hover.png" id="57_61548"]
+[ext_resource type="Texture2D" uid="uid://d37jd4b5y7ucq" path="res://general/assets/tilde.png" id="58_61548"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8cpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1tcsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lqlrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qhojp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a7wx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j5wwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rna57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m6bpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n881y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tiam4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yd0ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hly2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x1h6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wmhfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_krh45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ay2fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ay2fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_krh45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wmhfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x1h6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hly2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yd0ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tiam4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n881y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m6bpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rna57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j5wwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a7wx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qhojp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lqlrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1tcsx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_lqlrd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(51, 174)]
+}
+
+[sub_resource type="Animation" id="Animation_1tcsx"]
+resource_name = "default"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(51, 174), Vector2(51, 166)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhojp"]
+_data = {
+&"RESET": SubResource("Animation_lqlrd"),
+&"default": SubResource("Animation_1tcsx")
+}
+
+[sub_resource type="Animation" id="Animation_a7wx0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(114, 174)]
+}
+
+[sub_resource type="Animation" id="Animation_qhojp"]
+resource_name = "default"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(114, 174), Vector2(114, 166)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5wwn"]
+_data = {
+&"RESET": SubResource("Animation_a7wx0"),
+&"default": SubResource("Animation_qhojp")
+}
+
+[sub_resource type="Animation" id="Animation_j5wwn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(177, 174)]
+}
+
+[sub_resource type="Animation" id="Animation_rna57"]
+resource_name = "default"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(177, 174), Vector2(177, 166)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m6bpj"]
+_data = {
+&"RESET": SubResource("Animation_j5wwn"),
+&"default": SubResource("Animation_rna57")
+}
+
+[sub_resource type="Animation" id="Animation_3hxar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label_titulo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(462.00003, 266)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.13, 0.13)]
+}
+
+[sub_resource type="Animation" id="Animation_ypx53"]
+resource_name = "abrir_juego"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(462, 266), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.13, 0.13), Vector2(0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_titulo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_88ocs"]
+_data = {
+&"RESET": SubResource("Animation_3hxar"),
+&"abrir_juego": SubResource("Animation_ypx53")
+}
+
+[sub_resource type="Animation" id="Animation_ycg37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(184.00006, 266.00003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.13, 0.13)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_titulo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_k02xs"]
+resource_name = "abrir_juego"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(184, 266), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.13, 0.13), Vector2(0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_titulo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ypx53"]
+_data = {
+&"RESET": SubResource("Animation_ycg37"),
+&"abrir_juego": SubResource("Animation_k02xs")
+}
+
+[sub_resource type="Animation" id="Animation_kddk1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label_titulo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(742, 255)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.13, 0.13)]
+}
+
+[sub_resource type="Animation" id="Animation_kht1s"]
+resource_name = "abrir_juego"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(742, 266), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.13, 0.13), Vector2(0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_titulo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h1ar6"]
+_data = {
+&"RESET": SubResource("Animation_kddk1"),
+&"abrir_juego": SubResource("Animation_kht1s")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03ivo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_88ocs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kht1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_kddk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h1ar6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_osct8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h1ar6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_kddk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kht1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_88ocs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2qp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_5qpga")
+}],
+"loop": true,
+"name": &"abierto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_m1tiv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_q1o76")
+}],
+"loop": true,
+"name": &"llaves",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_m1tiv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(406.00003, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.45, 0.45)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5qpga"]
+resource_name = "desbloqueo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(98.00001, 526), Vector2(406.00003, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.01, 0.01), Vector2(0.45, 0.45)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5875583, -0.00076203933]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_q1o76"]
+resource_name = "guardar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(406.00003, 4), Vector2(87.99999, 530.0001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.45, 0.45), Vector2(0.015, 0.015)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5834092]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q1o76"]
+_data = {
+&"RESET": SubResource("Animation_m1tiv"),
+&"desbloqueo": SubResource("Animation_5qpga"),
+&"guardar": SubResource("Animation_q1o76")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_kncsj")
+
+[node name="Fondo1" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 2484.0
+offset_bottom = 1200.0
+scale = Vector2(0.46375507, 0.53992844)
+texture = ExtResource("2_pcw2w")
+
+[node name="Animacion_llave1" type="AnimatedSprite2D" parent="."]
+top_level = true
+position = Vector2(51, 174)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_o8cpa")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animacion_llave1"]
+libraries = {
+&"": SubResource("AnimationLibrary_qhojp")
+}
+autoplay = "default"
+
+[node name="Animacion_llave2" type="AnimatedSprite2D" parent="."]
+top_level = true
+position = Vector2(114, 174)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_o8cpa")
+autoplay = "default"
+frame_progress = 0.5688949
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animacion_llave2"]
+libraries = {
+&"": SubResource("AnimationLibrary_j5wwn")
+}
+autoplay = "default"
+
+[node name="Animacion_llave3" type="AnimatedSprite2D" parent="."]
+top_level = true
+position = Vector2(177, 174)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_o8cpa")
+autoplay = "default"
+frame_progress = 0.5688949
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animacion_llave3"]
+libraries = {
+&"": SubResource("AnimationLibrary_m6bpj")
+}
+autoplay = "default"
+
+[node name="LLaves_conseguidas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 81.0
+offset_right = 445.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 18
+text = "Llaves   conseguidas :"
+
+[node name="Boton_juego1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 462.00003
+offset_top = 266.0
+offset_right = 2382.0044
+offset_bottom = 1346.0
+scale = Vector2(0.13, 0.13)
+texture_normal = ExtResource("19_m2qp4")
+texture_hover = ExtResource("20_k02xs")
+
+[node name="Label_titulo" type="Label" parent="Boton_juego1"]
+layout_mode = 0
+offset_left = 592.9487
+offset_top = -190.0
+offset_right = 1392.9487
+offset_bottom = -38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.95596343, 0.9559633, 0.95596343, 1)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 150
+text = "LOVE   CARDS"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boton_juego1"]
+libraries = {
+&"": SubResource("AnimationLibrary_88ocs")
+}
+
+[node name="Boton_tutorial" type="TextureButton" parent="Boton_juego1"]
+layout_mode = 0
+offset_left = 1753.846
+offset_top = 1107.6923
+offset_right = 1870.846
+offset_bottom = 1287.6923
+texture_normal = ExtResource("21_03ivo")
+texture_hover = ExtResource("22_6hp8b")
+
+[node name="Tutorial" type="TextureRect" parent="Boton_juego1"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1683.0793
+offset_top = -1432.3079
+offset_right = -1218.0793
+offset_bottom = -1024.6155
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+texture = ExtResource("24_n881y")
+metadata/_edit_group_ = true
+
+[node name="Label_titulo" type="Label" parent="Boton_juego1/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 167.03296
+offset_top = 38.461555
+offset_right = 557.03296
+offset_bottom = 291.46155
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 28
+text = "Love   Cards"
+
+[node name="Label_descripcion" type="Label" parent="Boton_juego1/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.46154
+offset_top = 91.208786
+offset_right = 485.348
+offset_bottom = 344.2088
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 24
+text = "-Descripción: encuentra parejas de cartas, cada error 
+esconderá todas las cartas. En alta dificultad irás a 
+contrareloj. El test de IQ definitivo.
+
+-Controles: 
+Click izquierdo del ratón: seleccionar carta.
+
+-Requisitos: tómate tu tiempo si no tienes brazos y 
+usa todo tu IQ si eres pro gamer."
+
+[node name="Boton_cerrar" type="TextureButton" parent="Boton_juego1/Tutorial"]
+layout_mode = 0
+offset_left = 184.61583
+offset_top = 335.16507
+offset_right = 341.61584
+offset_bottom = 426.16507
+scale = Vector2(0.6, 0.432)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label_cerrar" type="Label" parent="Boton_juego1/Tutorial/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0589
+offset_top = 27.46399
+offset_right = 155.0589
+offset_bottom = 55.46399
+scale = Vector2(1.0166428, 1.3953202)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "Cerrar"
+
+[node name="Ganado" type="TextureRect" parent="Boton_juego1"]
+visible = false
+layout_mode = 0
+offset_left = 1715.3846
+offset_top = 30.769241
+offset_right = 1878.3846
+offset_bottom = 182.76924
+texture = ExtResource("26_ykh68")
+
+[node name="Boton_juego2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 184.00006
+offset_top = 266.00003
+offset_right = 2104.0002
+offset_bottom = 1346.0
+scale = Vector2(0.13, 0.13)
+texture_normal = ExtResource("28_61548")
+texture_hover = ExtResource("29_6w4m1")
+
+[node name="Label_titulo" type="Label" parent="Boton_juego2"]
+layout_mode = 0
+offset_left = 416.66724
+offset_top = -190.0
+offset_right = 1546.6672
+offset_bottom = -38.0
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 150
+text = "Problem   Jumper"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boton_juego2"]
+libraries = {
+&"": SubResource("AnimationLibrary_ypx53")
+}
+
+[node name="Boton_tutorial" type="TextureButton" parent="Boton_juego2"]
+layout_mode = 0
+offset_left = 1753.846
+offset_top = 1107.6923
+offset_right = 1870.846
+offset_bottom = 1287.6923
+texture_normal = ExtResource("21_03ivo")
+texture_hover = ExtResource("22_6hp8b")
+
+[node name="Tutorial" type="TextureRect" parent="Boton_juego2"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 455.38123
+offset_top = -1432.3079
+offset_right = 920.3812
+offset_bottom = -1067.3079
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+texture = ExtResource("24_n881y")
+metadata/_edit_group_ = true
+
+[node name="Label_titulo" type="Label" parent="Boton_juego2/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 137.3628
+offset_top = 38.461555
+offset_right = 527.3628
+offset_bottom = 291.46155
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 28
+text = "Problem   Jumper"
+
+[node name="Label_descripcion" type="Label" parent="Boton_juego2/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.46154
+offset_top = 91.208786
+offset_right = 428.46155
+offset_bottom = 344.2088
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 24
+text = "-Descripción: salta y esquiva obstáculo el mayor tiempo
+ posible. \"¿Quién ha puesto tanta mierda en medio?\"
+
+-Controles:
+Tecla 'Espacio' o 'W': saltar.
+
+-Requisitos: 100 puntos en dificultad sin brazos, 200
+en pro gamer."
+
+[node name="Boton_cerrar" type="TextureButton" parent="Boton_juego2/Tutorial"]
+layout_mode = 0
+offset_left = 184.61583
+offset_top = 294.50555
+offset_right = 341.61584
+offset_bottom = 385.50555
+scale = Vector2(0.6, 0.432)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label_cerrar" type="Label" parent="Boton_juego2/Tutorial/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0589
+offset_top = 27.46399
+offset_right = 155.0589
+offset_bottom = 55.46399
+scale = Vector2(1.0166428, 1.3953202)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "Cerrar"
+
+[node name="Ganado" type="TextureRect" parent="Boton_juego2"]
+visible = false
+layout_mode = 0
+offset_left = 1715.3846
+offset_top = 30.769241
+offset_right = 1878.3846
+offset_bottom = 182.76924
+texture = ExtResource("26_ykh68")
+
+[node name="Boton_juego3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 742.0
+offset_top = 255.0
+offset_right = 2662.0005
+offset_bottom = 1335.0
+scale = Vector2(0.13, 0.13)
+texture_normal = ExtResource("23_3hxar")
+texture_hover = ExtResource("24_88ocs")
+
+[node name="Label_titulo" type="Label" parent="Boton_juego3"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = -190.0
+offset_right = 1782.0
+offset_bottom = -38.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.98039216)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 150
+text = "A   lady   and   a   Revolver"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boton_juego3"]
+libraries = {
+&"": SubResource("AnimationLibrary_h1ar6")
+}
+
+[node name="Boton_tutorial" type="TextureButton" parent="Boton_juego3"]
+layout_mode = 0
+offset_left = 1753.846
+offset_top = 1107.6923
+offset_right = 1870.846
+offset_bottom = 1287.6923
+texture_normal = ExtResource("21_03ivo")
+texture_hover = ExtResource("22_6hp8b")
+
+[node name="Tutorial" type="TextureRect" parent="Boton_juego3"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3836.9265
+offset_top = -1501.5386
+offset_right = -3371.9265
+offset_bottom = -1025.7144
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7, 7)
+texture = ExtResource("24_n881y")
+metadata/_edit_group_ = true
+
+[node name="Label_titulo" type="Label" parent="Boton_juego3/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.21979
+offset_top = 38.461555
+offset_right = 470.2198
+offset_bottom = 291.46155
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 28
+text = "A   lady   and   a   Revolver"
+
+[node name="Label_descripcion" type="Label" parent="Boton_juego3/Tutorial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.46154
+offset_top = 91.208786
+offset_right = 428.46155
+offset_bottom = 344.2088
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 24
+text = "-Descripción: no has acariciado suficentes gatitos
+y ahora deberás luchar por salvar tu alma en el infierno.
+
+-Controles: 
+Click izquierdo del ratón: disparar, usar la tienda.
+Tecla 'R': recargar.
+Teclas '1', '2' y '3': alternar entre revólver, escopeta y
+MP40 respectivamente (si se han comprado).
+Teclas 'A', 'D' y 'Espacio': moverse y saltar.
+
+-Requisitos: sobrevivir 5 rondas en dificultad sin brazos
+y 10 en pro gamer."
+
+[node name="Boton_cerrar" type="TextureButton" parent="Boton_juego3/Tutorial"]
+layout_mode = 0
+offset_left = 184.61583
+offset_top = 397.80237
+offset_right = 341.61584
+offset_bottom = 488.80237
+scale = Vector2(0.6, 0.432)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label_cerrar" type="Label" parent="Boton_juego3/Tutorial/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0589
+offset_top = 27.46399
+offset_right = 155.0589
+offset_bottom = 55.46399
+scale = Vector2(1.0166428, 1.3953202)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "Cerrar"
+
+[node name="Ganado" type="TextureRect" parent="Boton_juego3"]
+visible = false
+layout_mode = 0
+offset_left = 1715.3846
+offset_top = 30.769241
+offset_right = 1878.3846
+offset_bottom = 182.76924
+texture = ExtResource("26_ykh68")
+
+[node name="Sonido_fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_a7wx0")
+bus = &"Musica"
+parameters/looping = true
+
+[node name="Musica_inicial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_j5wwn")
+volume_db = -20.0
+bus = &"Musica"
+parameters/looping = true
+
+[node name="Video_intro" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("22_hly2k")
+
+[node name="Configuracion" parent="." instance=ExtResource("22_rna57")]
+
+[node name="Mar" type="AnimatedSprite2D" parent="."]
+position = Vector2(573, 531)
+scale = Vector2(0.075, 0.075)
+sprite_frames = SubResource("SpriteFrames_03ivo")
+autoplay = "default"
+frame_progress = 0.31296524
+
+[node name="Mensaje_inicial" type="TextureRect" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.5
+offset_top = -182.5
+offset_right = 232.5
+offset_bottom = 182.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_n881y")
+metadata/_edit_group_ = true
+
+[node name="Label_mensaje" type="Label" parent="Mensaje_inicial"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 32.0
+offset_right = 431.0
+offset_bottom = 304.0
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 21
+text = "Salu2,  un  misterioso  genio  informático  ha  escondido  en  un   
+cofre  un  misterioso  secreto.
+
+Para  abrir  el  cofre  deberás  conseguir  las  3  llaves  repartidas   
+en   una   serie  de  retos  que  desafían  los  límites  de  la   
+enteligencia  humana.
+
+Antes  de  empezar  debes  elegir  una  dificultad  haciendo  click    
+en  el  engranaje  mal  dibujado en   la   esquina  inferior  derecha,    
+buena  suerte."
+
+[node name="Boton_valebro" type="TextureButton" parent="Mensaje_inicial"]
+layout_mode = 0
+offset_left = 177.5
+offset_top = 289.5
+offset_right = 334.5
+offset_bottom = 380.5
+scale = Vector2(0.7, 0.50429577)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label_valebro" type="Label" parent="Mensaje_inicial/Boton_valebro"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 33.5
+offset_top = 27.46399
+offset_right = 142.5
+offset_bottom = 55.46399
+scale = Vector2(1.0166428, 1.3953202)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "Vale   bro"
+
+[node name="Boton_introduccion" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 434.0
+offset_right = 1183.0
+offset_bottom = 614.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("26_yd0ce")
+texture_hover = ExtResource("38_kddk1")
+metadata/_edit_group_ = true
+
+[node name="Recordar_dificultad" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -173.49998
+offset_right = 229.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0066609, 0.86973506)
+texture = ExtResource("24_n881y")
+
+[node name="Label" type="Label" parent="Recordar_dificultad"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.23157
+offset_top = 58.571426
+offset_right = 371.23157
+offset_bottom = 81.57143
+scale = Vector2(1.0057464, 1.3879509)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "No    has   elegido    dificultad"
+
+[node name="Boton_300IQ" type="TextureButton" parent="Recordar_dificultad"]
+layout_mode = 0
+offset_left = 35.50003
+offset_top = 170.08754
+offset_right = 251.75
+offset_bottom = 261.08752
+scale = Vector2(0.80569977, 0.88193315)
+texture_normal = ExtResource("27_hly2k")
+texture_pressed = ExtResource("44_7mull")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Recordar_dificultad/Boton_300IQ"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.250008
+offset_top = 32.5
+offset_right = 198.25
+offset_bottom = 62.5
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 18
+text = "Pro  gamer  300IQ"
+
+[node name="Boton_noob" type="TextureButton" parent="Recordar_dificultad"]
+layout_mode = 0
+offset_left = 256.50006
+offset_top = 170.08752
+offset_right = 475.50006
+offset_bottom = 261.08752
+scale = Vector2(0.806, 0.882)
+texture_normal = ExtResource("27_hly2k")
+texture_pressed = ExtResource("46_y5mb2")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Recordar_dificultad/Boton_noob"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.25
+offset_top = 32.5
+offset_right = 236.25
+offset_bottom = 55.5
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 17
+text = "No  tengo  brazos  bro"
+
+[node name="Boton_volver" type="TextureButton" parent="Recordar_dificultad"]
+layout_mode = 0
+offset_left = 187.26959
+offset_top = 271.3794
+offset_right = 344.2696
+offset_bottom = 362.3794
+scale = Vector2(0.5554758, 0.49243346)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Recordar_dificultad/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.07794
+offset_top = 29.518372
+offset_right = 166.07794
+offset_bottom = 94.51834
+scale = Vector2(1.0187664, 1.1775752)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "Volver"
+
+[node name="Elegir_version" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.49997
+offset_top = -173.49998
+offset_right = 231.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0066609, 0.86973506)
+texture = ExtResource("24_n881y")
+
+[node name="Label" type="Label" parent="Elegir_version"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 146.8941
+offset_top = 58.571426
+offset_right = 362.8941
+offset_bottom = 92.57143
+scale = Vector2(1.0057464, 1.3879509)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 25
+text = "Elige    version"
+
+[node name="Tilde" type="TextureRect" parent="Elegir_version/Label"]
+layout_mode = 0
+offset_left = 154.58643
+offset_top = 1.0
+offset_right = 194.58643
+offset_bottom = 41.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("58_61548")
+
+[node name="Boton_original" type="TextureButton" parent="Elegir_version"]
+layout_mode = 0
+offset_left = 35.50003
+offset_top = 170.08754
+offset_right = 251.75
+offset_bottom = 261.08752
+scale = Vector2(0.80569977, 0.88193315)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Elegir_version/Boton_original"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 60.908783
+offset_top = 31.19629
+offset_right = 222.90878
+offset_bottom = 61.19629
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "Original"
+
+[node name="Boton_animaciones" type="TextureButton" parent="Elegir_version"]
+layout_mode = 0
+offset_left = 256.50006
+offset_top = 170.08752
+offset_right = 475.50006
+offset_bottom = 261.08752
+scale = Vector2(0.806, 0.882)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Elegir_version/Boton_animaciones"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.25
+offset_top = 32.5
+offset_right = 236.25
+offset_bottom = 55.5
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 17
+text = "Animaciones   cutres"
+
+[node name="Boton_volver" type="TextureButton" parent="Elegir_version"]
+layout_mode = 0
+offset_left = 187.26959
+offset_top = 271.3794
+offset_right = 344.2696
+offset_bottom = 362.3794
+scale = Vector2(0.5554758, 0.49243346)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Elegir_version/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.07794
+offset_top = 29.518372
+offset_right = 166.07794
+offset_bottom = 94.51834
+scale = Vector2(1.0187664, 1.1775752)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "Volver"
+
+[node name="Textura_titulo" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -327.99994
+offset_top = -309.0
+offset_right = 640.0
+offset_bottom = -127.999985
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("28_x1h6d")
+
+[node name="Salir_juego" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Textura" type="TextureRect" parent="Salir_juego"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -173.5
+offset_right = 229.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0066609, 0.7906968)
+texture = ExtResource("24_n881y")
+
+[node name="Label" type="Label" parent="Salir_juego/Textura"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 132.98676
+offset_top = 58.571426
+offset_right = 348.98676
+offset_bottom = 89.57143
+scale = Vector2(1.0057464, 1.3879509)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "¿ Salir    del  juego ?"
+
+[node name="Boton_salir" type="TextureButton" parent="Salir_juego/Textura"]
+layout_mode = 0
+offset_left = 256.50006
+offset_top = 187.0895
+offset_right = 475.50006
+offset_bottom = 278.08948
+scale = Vector2(0.806, 0.882)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Salir_juego/Textura/Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 55.82965
+offset_top = 32.5
+offset_right = 265.82965
+offset_bottom = 55.5
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 22
+text = "Por   favor"
+
+[node name="Boton_cancelar" type="TextureButton" parent="Salir_juego/Textura"]
+layout_mode = 0
+offset_left = 35.5
+offset_top = 187.0895
+offset_right = 251.74997
+offset_bottom = 278.08948
+scale = Vector2(0.80569977, 0.88193315)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Salir_juego/Textura/Boton_cancelar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 27.619392
+offset_top = 32.5
+offset_right = 189.61938
+offset_bottom = 62.5
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 22
+text = "Naaa   era  broma"
+
+[node name="Sonido_salir" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_wb33y")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_ay2fq")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_kht1s")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_advertencia" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_h1ar6")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_wb33y")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Boton_cofre" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 493.0
+offset_right = 170.0
+offset_bottom = 592.0
+
+[node name="Texturas_cofre" type="AnimatedSprite2D" parent="Boton_cofre"]
+position = Vector2(67, 50)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_m2qp4")
+animation = &"abierto"
+
+[node name="Sonido_abrir" type="AudioStreamPlayer" parent="Boton_cofre/Texturas_cofre"]
+stream = ExtResource("35_s2n4x")
+volume_db = -10.0
+
+[node name="Sonido_llave_cerradura" type="AudioStreamPlayer" parent="Boton_cofre/Texturas_cofre"]
+stream = ExtResource("36_0wand")
+
+[node name="Sonido_cerrar" type="AudioStreamPlayer" parent="Boton_cofre/Texturas_cofre"]
+stream = ExtResource("55_6w4m1")
+volume_db = -10.0
+
+[node name="Spoiler" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 406.00003
+offset_top = 4.0
+offset_right = 1199.995
+offset_bottom = 1428.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("32_o8cpa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spoiler"]
+libraries = {
+&"": SubResource("AnimationLibrary_q1o76")
+}
+
+[node name="Advertencia_llaves" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -173.5
+offset_right = 229.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0066609, 0.7906968)
+texture = ExtResource("24_n881y")
+
+[node name="Label" type="Label" parent="Advertencia_llaves"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.07323
+offset_top = 61.338284
+offset_right = 419.07324
+offset_bottom = 92.33829
+scale = Vector2(1.0057464, 1.3879509)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "No   tienes   suficientes   llaves    "
+
+[node name="Boton_cerrar" type="TextureButton" parent="Advertencia_llaves"]
+layout_mode = 0
+offset_left = 151.72583
+offset_top = 208.58951
+offset_right = 367.9758
+offset_bottom = 299.5895
+scale = Vector2(0.80569977, 0.88193315)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Advertencia_llaves/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.861557
+offset_top = 30.930237
+offset_right = 204.86156
+offset_bottom = 60.930237
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 22
+text = "No   se  contar"
+
+[node name="Tilde" type="TextureRect" parent="Advertencia_llaves/Boton_cerrar/Label"]
+layout_mode = 0
+offset_left = 49.31787
+offset_top = -1.4333496
+offset_right = 89.31787
+offset_bottom = 38.56665
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("58_61548")
+
+[node name="Boton_records" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 341.0
+offset_right = 1320.0
+offset_bottom = 642.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("55_pq3jr")
+texture_hover = ExtResource("57_61548")
+
+[node name="Records" type="TextureRect" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -213.0
+offset_right = 233.0
+offset_bottom = 212.27478
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_n881y")
+metadata/_edit_group_ = true
+
+[node name="Label_titulo" type="Label" parent="Records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 186.03296
+offset_top = 38.461555
+offset_right = 576.03296
+offset_bottom = 291.46155
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 28
+text = "RECORDS"
+
+[node name="Tilde" type="TextureRect" parent="Records/Label_titulo"]
+layout_mode = 0
+offset_left = 20.967041
+offset_top = 0.53845215
+offset_right = 60.96704
+offset_bottom = 40.538452
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("58_61548")
+
+[node name="Label_dificultad" type="Label" parent="Records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.46154
+offset_top = 90.20878
+offset_right = 485.348
+offset_bottom = 343.2088
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 34
+text = "-Dificultad:
+"
+
+[node name="Label_record_saltar" type="Label" parent="Records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.46154
+offset_top = 152.2088
+offset_right = 485.348
+offset_bottom = 405.2088
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 29
+text = "-Problem Jumper:
+"
+
+[node name="Label_record_cartas" type="Label" parent="Records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.462
+offset_top = 294.209
+offset_right = 485.34845
+offset_bottom = 547.2091
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 29
+text = "-Love Cards:
+"
+
+[node name="Label_record_zombies" type="Label" parent="Records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.462
+offset_top = 210.209
+offset_right = 485.34845
+offset_bottom = 463.20892
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("23_ykh68")
+theme_override_font_sizes/font_size = 29
+text = "-A lady and a revolver:
+"
+
+[node name="Boton_cerrar" type="TextureButton" parent="Records"]
+layout_mode = 0
+offset_left = 184.61583
+offset_top = 350.54968
+offset_right = 341.61584
+offset_bottom = 441.54968
+scale = Vector2(0.6, 0.432)
+texture_normal = ExtResource("25_tiam4")
+texture_hover = ExtResource("28_wmhfo")
+metadata/_edit_group_ = true
+
+[node name="Label_cerrar" type="Label" parent="Records/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0589
+offset_top = 27.46399
+offset_right = 155.0589
+offset_bottom = 55.46399
+scale = Vector2(1.0166428, 1.3953202)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 20
+text = "Cerrar"
+
+[node name="Advertencia_records" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -173.5
+offset_right = 229.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0066609, 0.7906968)
+texture = ExtResource("24_n881y")
+
+[node name="Label" type="Label" parent="Advertencia_records"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 71.026886
+offset_top = 61.338295
+offset_right = 426.0269
+offset_bottom = 92.338295
+scale = Vector2(1.0057464, 1.3879509)
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 23
+text = "No   has   empezado   una   partida"
+
+[node name="Boton_cerrar" type="TextureButton" parent="Advertencia_records"]
+layout_mode = 0
+offset_left = 151.72583
+offset_top = 208.58951
+offset_right = 367.9758
+offset_bottom = 299.5895
+scale = Vector2(0.80569977, 0.88193315)
+texture_normal = ExtResource("27_hly2k")
+texture_hover = ExtResource("29_krh45")
+
+[node name="Label" type="Label" parent="Advertencia_records/Boton_cerrar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.2592
+offset_top = 30.930218
+offset_right = 212.2592
+offset_bottom = 60.930218
+theme_override_fonts/font = ExtResource("18_lqlrd")
+theme_override_font_sizes/font_size = 22
+text = "My   bad   bro"
+
+[connection signal="pressed" from="Boton_juego1" to="." method="cargar_juego_cartas"]
+[connection signal="pressed" from="Boton_juego1/Boton_tutorial" to="." method="alternar_tutorial1"]
+[connection signal="pressed" from="Boton_juego1/Tutorial/Boton_cerrar" to="." method="alternar_tutorial1"]
+[connection signal="pressed" from="Boton_juego2" to="." method="cargar_juego_runner"]
+[connection signal="pressed" from="Boton_juego2/Boton_tutorial" to="." method="alternar_tutorial2"]
+[connection signal="pressed" from="Boton_juego2/Tutorial/Boton_cerrar" to="." method="alternar_tutorial2"]
+[connection signal="pressed" from="Boton_juego3" to="." method="alternar_menu_version"]
+[connection signal="pressed" from="Boton_juego3/Boton_tutorial" to="." method="alternar_tutorial3"]
+[connection signal="pressed" from="Boton_juego3/Tutorial/Boton_cerrar" to="." method="alternar_tutorial3"]
+[connection signal="pressed" from="Mensaje_inicial/Boton_valebro" to="." method="boton_introduccion"]
+[connection signal="pressed" from="Boton_introduccion" to="." method="boton_introduccion"]
+[connection signal="pressed" from="Recordar_dificultad/Boton_300IQ" to="." method="dificultad_dificil_aviso"]
+[connection signal="pressed" from="Recordar_dificultad/Boton_noob" to="." method="dificultad_facil_aviso"]
+[connection signal="pressed" from="Recordar_dificultad/Boton_volver" to="." method="recordar_dificultad"]
+[connection signal="pressed" from="Elegir_version/Boton_original" to="." method="elegir_version_original"]
+[connection signal="pressed" from="Elegir_version/Boton_animaciones" to="." method="cargar_juego_zombies"]
+[connection signal="pressed" from="Elegir_version/Boton_volver" to="." method="alternar_menu_version"]
+[connection signal="pressed" from="Salir_juego/Textura/Boton_salir" to="." method="cerrar_juego"]
+[connection signal="pressed" from="Salir_juego/Textura/Boton_cancelar" to="." method="cancelar_salir"]
+[connection signal="pressed" from="Boton_cofre" to="." method="abrir_cofre"]
+[connection signal="pressed" from="Advertencia_llaves/Boton_cerrar" to="." method="alternar_advertencia_llaves"]
+[connection signal="pressed" from="Boton_records" to="." method="alternar_records"]
+[connection signal="pressed" from="Records/Boton_cerrar" to="." method="alternar_records"]
+[connection signal="pressed" from="Advertencia_records/Boton_cerrar" to="." method="alternar_records"]

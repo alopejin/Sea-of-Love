@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl3sihjj65ul5"
+path="res://.godot/imported/Blind Faith ☮ Sea of Joy [FZQXvUeHmjQ].mp3-8c2fa738ffa5d2c2b0f7ea75f7db1926.mp3str"
+
+[deps]
+
+source_file="res://menu_principal/assets/sonidos/Blind Faith ☮ Sea of Joy [FZQXvUeHmjQ].mp3"
+dest_files=["res://.godot/imported/Blind Faith ☮ Sea of Joy [FZQXvUeHmjQ].mp3-8c2fa738ffa5d2c2b0f7ea75f7db1926.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
