@@ -1,0 +1,105 @@
+[gd_scene load_steps=22 format=3 uid="uid://do624pvrqcjd1"]
+
+[ext_resource type="Texture2D" uid="uid://c508m41yufmxe" path="res://juego2/assets/animaciones/reloj1/1.png" id="2_0c7f8"]
+[ext_resource type="Texture2D" uid="uid://ckiougwrypj7j" path="res://juego2/assets/animaciones/reloj1/2.png" id="3_4y4lc"]
+[ext_resource type="Texture2D" uid="uid://brfbjfnvwwxv" path="res://juego2/assets/animaciones/reloj1/3.png" id="4_7y4yy"]
+[ext_resource type="Texture2D" uid="uid://dbpju5gm2kyor" path="res://juego2/assets/animaciones/reloj1/4.png" id="5_eeya0"]
+[ext_resource type="Texture2D" uid="uid://b45aan6dpgex" path="res://juego2/assets/animaciones/reloj1/5.png" id="6_rrwx5"]
+[ext_resource type="Texture2D" uid="uid://dpo2esmk5ahf1" path="res://juego2/assets/animaciones/reloj1/6.png" id="7_xpto6"]
+[ext_resource type="Texture2D" uid="uid://ci5ay58wht2ds" path="res://juego2/assets/animaciones/reloj1/7.png" id="8_1lbbr"]
+[ext_resource type="Texture2D" uid="uid://c1krnrdx87omc" path="res://juego2/assets/animaciones/reloj1/8.png" id="9_yf648"]
+[ext_resource type="Texture2D" uid="uid://c5g3jg7w7rjx6" path="res://juego2/assets/animaciones/reloj1/9.png" id="10_lfino"]
+[ext_resource type="Texture2D" uid="uid://cqrms107fwdyq" path="res://juego2/assets/animaciones/reloj1/10.png" id="11_7awef"]
+[ext_resource type="Texture2D" uid="uid://k20o5u6cnfan" path="res://juego2/assets/animaciones/reloj1/11.png" id="12_e72dy"]
+[ext_resource type="Texture2D" uid="uid://eelkl4yb24vr" path="res://juego2/assets/animaciones/reloj1/12.png" id="13_61qbb"]
+[ext_resource type="Texture2D" uid="uid://8wxbbd5o2vtg" path="res://juego2/assets/animaciones/reloj1/13.png" id="14_72xk8"]
+[ext_resource type="Texture2D" uid="uid://c7rvkh113oevl" path="res://juego2/assets/animaciones/reloj1/14.png" id="15_js2de"]
+[ext_resource type="Texture2D" uid="uid://bftgiktxx2cjk" path="res://juego2/assets/animaciones/reloj1/15.png" id="16_m6201"]
+[ext_resource type="Texture2D" uid="uid://bet1p0wh62ajt" path="res://juego2/assets/animaciones/reloj1/16.png" id="17_x04sn"]
+[ext_resource type="Texture2D" uid="uid://dne86u2omp5by" path="res://juego2/assets/animaciones/reloj1/17.png" id="18_h1fy8"]
+[ext_resource type="Texture2D" uid="uid://cxl88sxdq5phu" path="res://juego2/assets/animaciones/reloj1/18.png" id="19_abm0o"]
+[ext_resource type="Texture2D" uid="uid://cw4u35m7lpk1q" path="res://juego2/assets/animaciones/reloj1/19.png" id="20_j5qmq"]
+[ext_resource type="Texture2D" uid="uid://bxr1ybb8ubtay" path="res://juego2/assets/animaciones/reloj1/20.png" id="21_lyn4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlh2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0c7f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4y4lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7y4yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eeya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rrwx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xpto6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1lbbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yf648")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lfino")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7awef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e72dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_61qbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_72xk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_js2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_m6201")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_x04sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_h1fy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_abm0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_j5qmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lyn4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Area2D" type="Area2D"]
+texture_filter = 1
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.9436502, 0.95472956)
+polygon = PackedVector2Array(-54, -61, -53, -54, -13, 1, -30, 27, -52, 56, -53, 63, -47, 66, 31, 66, 40, 65, 43, 60, 37, 48, 5, 1, 42.310795, -56.194744, 42.310795, -61.21213, 40, -66, 35, -66, -5, -66, -52, -66)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6.5, 0)
+scale = Vector2(0.3898704, 0.48235643)
+sprite_frames = SubResource("SpriteFrames_xlh2d")
+autoplay = "default"
+frame_progress = 0.7366415

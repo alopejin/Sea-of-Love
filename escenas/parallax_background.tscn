@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4l3tivedkmbu"]
+
+[ext_resource type="Texture2D" uid="uid://bkvai62m24l1d" path="res://juego2/assets/animaciones/fondo2/1.png" id="1_tn7jn"]
+[ext_resource type="Texture2D" uid="uid://bxjxusqjdey4i" path="res://juego2/assets/animaciones/fondo2/2.png" id="2_cybwr"]
+[ext_resource type="Texture2D" uid="uid://d1fbpfjo8mip0" path="res://juego2/assets/parallaxbueno.png" id="2_p0bfi"]
+[ext_resource type="Texture2D" uid="uid://ds00a56dyfa1u" path="res://juego2/assets/animaciones/fondo2/3.png" id="3_pk50k"]
+[ext_resource type="Texture2D" uid="uid://y1sseieie1y6" path="res://juego2/assets/animaciones/fondo2/4.png" id="4_pydch"]
+[ext_resource type="Texture2D" uid="uid://c4iqmx76h5wcr" path="res://juego2/assets/animaciones/fondo2/5.png" id="5_17h72"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tn7jn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tn7jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cybwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pk50k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pydch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_17h72")
+}],
+"loop": true,
+"name": &"brillo",
+"speed": 5.0
+}]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.46212256, 0.53758925)
+sprite_frames = SubResource("SpriteFrames_tn7jn")
+animation = &"brillo"
+autoplay = "brillo"
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("2_p0bfi")
+centered = false

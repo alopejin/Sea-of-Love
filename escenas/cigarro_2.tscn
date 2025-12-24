@@ -1,0 +1,132 @@
+[gd_scene load_steps=19 format=3 uid="uid://riikjkk0qbao"]
+
+[ext_resource type="Texture2D" uid="uid://c7nj0ls8mc4i1" path="res://juego2/assets/animaciones/cigarro/1.png" id="1_6u57i"]
+[ext_resource type="Script" uid="uid://baq23e7akrh42" path="res://juego2/scripts/cigarro_2.gd" id="1_f2hft"]
+[ext_resource type="Texture2D" uid="uid://dnjnrppc0dtkp" path="res://juego2/assets/animaciones/cigarro/2.png" id="2_f2hft"]
+[ext_resource type="Texture2D" uid="uid://dlvfx30r4ogkx" path="res://juego2/assets/animaciones/cigarro/3.png" id="3_effwj"]
+[ext_resource type="Texture2D" uid="uid://pkekfeyuhsjo" path="res://juego2/assets/animaciones/cigarro/4.png" id="4_d8xru"]
+[ext_resource type="Texture2D" uid="uid://nympyfyarhpf" path="res://juego2/assets/animaciones/cigarro/5.png" id="5_q0o6a"]
+[ext_resource type="Texture2D" uid="uid://difsr6lwdfasd" path="res://juego2/assets/animaciones/cigarro/6.png" id="6_to3js"]
+[ext_resource type="Texture2D" uid="uid://bwc58trmtf7ls" path="res://juego2/assets/animaciones/cigarro/7.png" id="7_2a3ow"]
+[ext_resource type="Texture2D" uid="uid://jnligbkkdqfo" path="res://juego2/assets/animaciones/cigarro/8.png" id="8_88mfq"]
+[ext_resource type="Texture2D" uid="uid://dcwwisuul7fuu" path="res://juego2/assets/animaciones/cigarro/9.png" id="9_rq5wn"]
+[ext_resource type="Texture2D" uid="uid://ccpmlo23k71g1" path="res://juego2/assets/animaciones/cigarro/10.png" id="10_qbnla"]
+[ext_resource type="Texture2D" uid="uid://cfrwy2ijnbv0q" path="res://juego2/assets/animaciones/cigarro/11.png" id="11_rn26b"]
+[ext_resource type="Texture2D" uid="uid://b2xum3wf7ewn1" path="res://juego2/assets/animaciones/cigarro/12.png" id="12_qevlv"]
+[ext_resource type="Texture2D" uid="uid://blvc2mm7q5fvj" path="res://juego2/assets/animaciones/cigarro/13.png" id="13_1nsuv"]
+[ext_resource type="Texture2D" uid="uid://bnn0f5n1dwjrn" path="res://juego2/assets/animaciones/cigarro/14.png" id="14_hsexa"]
+[ext_resource type="Texture2D" uid="uid://4kyb8qpnua7m" path="res://juego2/assets/animaciones/cigarro/15.png" id="15_3bcfp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83kr3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6u57i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f2hft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_effwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d8xru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q0o6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_to3js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2a3ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_88mfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rq5wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qbnla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rn26b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qevlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1nsuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hsexa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3bcfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hsexa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1nsuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qevlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rn26b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qbnla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rq5wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_88mfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2a3ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_to3js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q0o6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d8xru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_effwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f2hft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_6u57i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 58.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24rgp"]
+size = Vector2(230, 30)
+
+[node name="Cigarro2" type="CharacterBody2D"]
+script = ExtResource("1_f2hft")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_83kr3")
+autoplay = "default"
+frame_progress = 0.67307335
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 11)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_24rgp")

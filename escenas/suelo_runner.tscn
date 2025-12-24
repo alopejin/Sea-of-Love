@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck4nfxej48k3s"]
+
+[ext_resource type="Texture2D" uid="uid://de5sqd1u1wi0x" path="res://juego2/assets/fondoblefuncion2.png" id="1_palyr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puckb"]
+size = Vector2(2310.5, 183)
+
+[node name="suelo_runner" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 466)
+texture = ExtResource("1_palyr")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1154.75, 557.5)
+shape = SubResource("RectangleShape2D_puckb")

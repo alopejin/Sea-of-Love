@@ -1,0 +1,169 @@
+[gd_scene load_steps=15 format=3 uid="uid://djaoe1ihgo7f3"]
+
+[ext_resource type="PackedScene" uid="uid://b4l3tivedkmbu" path="res://juego2/escenas/parallax_background.tscn" id="1_86148"]
+[ext_resource type="Script" uid="uid://0n8dgg61ndyc" path="res://juego2/scripts/main_runner.gd" id="1_tqejg"]
+[ext_resource type="PackedScene" uid="uid://ck4nfxej48k3s" path="res://juego2/escenas/suelo_runner.tscn" id="2_tqejg"]
+[ext_resource type="PackedScene" uid="uid://dh0xy2bcirn7f" path="res://juego2/escenas/mar_runner.tscn" id="3_t1kji"]
+[ext_resource type="PackedScene" uid="uid://c4a5fbk6lydfb" path="res://general/escenas/pausa.tscn" id="5_jbvnv"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="6_v782m"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="7_6vtkl"]
+[ext_resource type="Texture2D" uid="uid://d37jd4b5y7ucq" path="res://general/assets/tilde.png" id="7_xyg4x"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="8_qemxh"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="9_pqbk2"]
+[ext_resource type="AudioStream" uid="uid://bnp5gmoncmycq" path="res://juego2/assets/sonidos/Attack on titan Season 2 ED - Yuugure no tori - History Ver [scRNEB8cJxY].mp3" id="10_jbvnv"]
+[ext_resource type="PackedScene" uid="uid://c1awhxu7uswiq" path="res://general/escenas/llave_desbloqueada.tscn" id="10_qemxh"]
+[ext_resource type="AudioStream" uid="uid://bu4g8xlyq2afl" path="res://juego2/assets/sonidos/hit-rock-01-266301.mp3" id="11_jbvnv"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="11_xyg4x"]
+
+[node name="main_runner" type="Node"]
+script = ExtResource("1_tqejg")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_86148")]
+
+[node name="suelo_runner" parent="." instance=ExtResource("2_tqejg")]
+
+[node name="mar_runner" parent="." instance=ExtResource("3_t1kji")]
+position = Vector2(163, 417)
+
+[node name="camara" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Pausa" parent="." instance=ExtResource("5_jbvnv")]
+
+[node name="info_runner" type="CanvasLayer" parent="Pausa"]
+
+[node name="Label_puntuacion" type="Label" parent="Pausa/info_runner"]
+texture_filter = 1
+offset_left = 33.0
+offset_top = 17.0
+offset_right = 141.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 32
+text = "Puntuacion: "
+
+[node name="Tilde" type="TextureRect" parent="Pausa/info_runner/Label_puntuacion"]
+layout_mode = 0
+offset_left = 148.00002
+offset_top = 10.0
+offset_right = 188.00002
+offset_bottom = 50.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("7_xyg4x")
+
+[node name="Label_record" type="Label" parent="Pausa/info_runner"]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -245.0
+offset_top = 18.0
+offset_right = -132.0
+offset_bottom = 62.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 32
+text = "Record:"
+
+[node name="Tilde" type="TextureRect" parent="Pausa/info_runner/Label_record"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 10.0
+offset_right = 66.0
+offset_bottom = 50.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("7_xyg4x")
+
+[node name="Label_derrota" type="Label" parent="Pausa/info_runner"]
+texture_filter = 1
+offset_left = 464.0
+offset_top = 174.0
+offset_right = 686.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 60
+text = "GG   noob"
+
+[node name="Label_empezar" type="Label" parent="Pausa"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -8.0
+offset_right = 361.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 48
+text = "Pulsa   espacio   para   empezar"
+
+[node name="Salir_o_empezar" type="Node" parent="."]
+process_mode = 3
+
+[node name="Botones" type="CanvasLayer" parent="Salir_o_empezar"]
+
+[node name="Llave_desbloqueada" parent="Salir_o_empezar/Botones" instance=ExtResource("10_qemxh")]
+
+[node name="Boton_salir" type="TextureButton" parent="Salir_o_empezar/Botones"]
+texture_filter = 1
+offset_left = 366.0
+offset_top = 516.0
+offset_right = 523.0
+offset_bottom = 610.0
+texture_normal = ExtResource("8_qemxh")
+texture_hover = ExtResource("9_pqbk2")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Salir_o_empezar/Botones/Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.0
+offset_top = 30.0
+offset_right = 113.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 26
+text = "Salir"
+
+[node name="Boton_reiniciar" type="TextureButton" parent="Salir_o_empezar/Botones"]
+texture_filter = 1
+offset_left = 578.0
+offset_top = 516.0
+offset_right = 797.0
+offset_bottom = 607.0
+texture_normal = ExtResource("6_v782m")
+texture_hover = ExtResource("11_xyg4x")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Salir_o_empezar/Botones/Boton_reiniciar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 27.0
+offset_top = 30.0
+offset_right = 189.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("7_6vtkl")
+theme_override_font_sizes/font_size = 22
+text = "Jugar   de   nuevo"
+
+[node name="Musica" type="AudioStreamPlayer" parent="Salir_o_empezar"]
+stream = ExtResource("10_jbvnv")
+volume_db = -10.0
+bus = &"Musica"
+parameters/looping = true
+
+[node name="Sonido_hostia" type="AudioStreamPlayer" parent="Salir_o_empezar"]
+stream = ExtResource("11_jbvnv")
+volume_db = -15.0
+bus = &"Efectos"
+
+[node name="Timer_cigarro" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="pressed" from="Salir_o_empezar/Botones/Boton_salir" to="." method="salir"]
+[connection signal="pressed" from="Salir_o_empezar/Botones/Boton_reiniciar" to="." method="reiniciar"]
+[connection signal="timeout" from="Timer_cigarro" to="." method="timer_cigarro"]

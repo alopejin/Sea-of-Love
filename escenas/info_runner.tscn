@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://25vxnj1tikqu"]
+
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="1_x2xt3"]
+
+[node name="info_runner" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="Puntuacion" type="Label" parent="."]
+texture_filter = 1
+offset_left = 33.0
+offset_top = 17.0
+offset_right = 141.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("1_x2xt3")
+theme_override_font_sizes/font_size = 32
+text = "Puntuación: "
+
+[node name="Record" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -266.0
+offset_top = 18.0
+offset_right = -153.0
+offset_bottom = 62.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_x2xt3")
+theme_override_font_sizes/font_size = 32
+text = "Record:"
+
+[node name="Empezar" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -8.0
+offset_right = 361.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_x2xt3")
+theme_override_font_sizes/font_size = 48
+text = "Pulsa   espacio   para   empezar"

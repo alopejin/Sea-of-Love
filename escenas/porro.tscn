@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://crejovwhm5pw8"]
+
+[ext_resource type="Texture2D" uid="uid://bxg6g72gar4lg" path="res://juego2/assets/animaciones/porro/porrobase3redimensionado.png" id="1_ol1tc"]
+[ext_resource type="Texture2D" uid="uid://f182jxrngxbs" path="res://juego2/assets/animaciones/porro/porrobase3redimensionado-humo2.png" id="2_b5vh8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cugog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ol1tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b5vh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="porro" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5158317, 1.2409859)
+sprite_frames = SubResource("SpriteFrames_cugog")
+autoplay = "default"
+frame_progress = 0.0043608737
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1.4549472, 1.2362511)
+polygon = PackedVector2Array(2, 80, 8, 66, 14, 40, 25, -11, 31, -36, 24, -47, -21, -46, -28, -39, -22, -14, -11, 32)
