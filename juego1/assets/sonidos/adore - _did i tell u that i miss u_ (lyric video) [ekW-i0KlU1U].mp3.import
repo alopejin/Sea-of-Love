@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db0ij5twyk58h"
+path="res://.godot/imported/adore - _did i tell u that i miss u_ (lyric video) [ekW-i0KlU1U].mp3-80501b890194f8170f3df9c18356c890.mp3str"
+
+[deps]
+
+source_file="res://juego1/assets/sonidos/adore - _did i tell u that i miss u_ (lyric video) [ekW-i0KlU1U].mp3"
+dest_files=["res://.godot/imported/adore - _did i tell u that i miss u_ (lyric video) [ekW-i0KlU1U].mp3-80501b890194f8170f3df9c18356c890.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

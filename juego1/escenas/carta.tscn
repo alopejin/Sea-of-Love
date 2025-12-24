@@ -1,0 +1,150 @@
+[gd_scene load_steps=36 format=3 uid="uid://csqr383kp3uq7"]
+
+[ext_resource type="Texture2D" uid="uid://v0au10g6ywfk" path="res://juego1/assets/carta_sin_voltear2.png" id="1_3x5xg"]
+[ext_resource type="Texture2D" uid="uid://dal8a8uiaw0im" path="res://juego1/assets/carta_sin_voltear_pulsada2.png" id="2_1j3id"]
+[ext_resource type="Script" uid="uid://erof7s85grid" path="res://juego1/scripts/carta.gd" id="3_0xfsh"]
+[ext_resource type="Texture2D" uid="uid://bpjbl3jvxtcn0" path="res://juego1/assets/cartahover.png" id="3_ytn5d"]
+[ext_resource type="Texture2D" uid="uid://pkid7mes4pvj" path="res://juego1/assets/animacion cartas/1.png" id="4_piq2r"]
+[ext_resource type="Texture2D" uid="uid://cb0blw2ojs17f" path="res://juego1/assets/animacion cartas/2.png" id="5_ytn5d"]
+[ext_resource type="Texture2D" uid="uid://g7jlixniewa2" path="res://juego1/assets/animacion cartas/3.png" id="6_lxc43"]
+[ext_resource type="Texture2D" uid="uid://bclxw84jnteul" path="res://juego1/assets/animacion cartas/4.png" id="7_7nxiy"]
+[ext_resource type="Texture2D" uid="uid://3pmyrs1ucrju" path="res://juego1/assets/animacion cartas/5.png" id="8_6giba"]
+[ext_resource type="Texture2D" uid="uid://omns0226pnss" path="res://juego1/assets/animacion cartas/6.png" id="9_it2cu"]
+[ext_resource type="Texture2D" uid="uid://wktyoskl6if1" path="res://juego1/assets/animacion cartas/7.png" id="10_eomki"]
+[ext_resource type="Texture2D" uid="uid://co5uppof6tf8l" path="res://juego1/assets/animacion cartas/8.png" id="11_w13lp"]
+[ext_resource type="Texture2D" uid="uid://cehlwnw2yetdm" path="res://juego1/assets/animacion cartas/9.png" id="12_p4kxb"]
+[ext_resource type="Texture2D" uid="uid://dnm6wgupjiybc" path="res://juego1/assets/animacion cartas/10.png" id="13_61f12"]
+[ext_resource type="Texture2D" uid="uid://cw4xgbd3viysp" path="res://juego1/assets/animacion cartas/11.png" id="14_3lnth"]
+[ext_resource type="Texture2D" uid="uid://clo76pqn11767" path="res://juego1/assets/animacion cartas/12.png" id="15_mqv6i"]
+[ext_resource type="Texture2D" uid="uid://d0c4tdspc7x44" path="res://juego1/assets/animacion cartas/13.png" id="16_77ggi"]
+[ext_resource type="Texture2D" uid="uid://g0q00nant48c" path="res://juego1/assets/animacion cartas/14.png" id="17_2vtdp"]
+[ext_resource type="Texture2D" uid="uid://d4hqqrgvkpuo8" path="res://juego1/assets/animacion cartas/15.png" id="18_tlprn"]
+[ext_resource type="Texture2D" uid="uid://bbs28bp0jta5r" path="res://juego1/assets/animacion cartas/16.png" id="19_gwvgt"]
+[ext_resource type="Texture2D" uid="uid://ca8iuxtg5n6io" path="res://juego1/assets/animacion cartas/17.png" id="20_niowl"]
+[ext_resource type="Texture2D" uid="uid://cbuwftcjnjpxe" path="res://juego1/assets/animacion cartas/18.png" id="21_81q4u"]
+[ext_resource type="Texture2D" uid="uid://bmp8t52jxu8bm" path="res://juego1/assets/animacion cartas/19.png" id="22_4auai"]
+[ext_resource type="Texture2D" uid="uid://dn8lhw6tb30nc" path="res://juego1/assets/animacion cartas/20.png" id="23_2rkxh"]
+[ext_resource type="Texture2D" uid="uid://dm6ek53icpktt" path="res://juego1/assets/animacion cartas/21.png" id="24_ympx1"]
+[ext_resource type="Texture2D" uid="uid://bofof8fqo6nv2" path="res://juego1/assets/animacion cartas/22.png" id="25_q4jne"]
+[ext_resource type="Texture2D" uid="uid://dwal0iyb7ryi0" path="res://juego1/assets/animacion cartas/23.png" id="26_h1oxt"]
+[ext_resource type="Texture2D" uid="uid://b4l88qawdas3s" path="res://juego1/assets/animacion cartas/24.png" id="27_dixm7"]
+[ext_resource type="Texture2D" uid="uid://qif5t6ji0rec" path="res://juego1/assets/animacion cartas/25.png" id="28_jp6ww"]
+[ext_resource type="Texture2D" uid="uid://dxet6a6ipslo4" path="res://juego1/assets/animacion cartas/26.png" id="29_tejo7"]
+[ext_resource type="Texture2D" uid="uid://dyt3rsi2fvttv" path="res://juego1/assets/animacion cartas/27.png" id="30_ox0nv"]
+[ext_resource type="Texture2D" uid="uid://drnm4jx7jj4fc" path="res://juego1/assets/animacion cartas/28.png" id="31_7buco"]
+[ext_resource type="Texture2D" uid="uid://bqt5jn3qqblh8" path="res://juego1/assets/animacion cartas/29.png" id="32_6sscu"]
+[ext_resource type="Texture2D" uid="uid://crvixuxkvh540" path="res://juego1/assets/animacion cartas/30.png" id="33_ryw00"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5bgs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_piq2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ytn5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lxc43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7nxiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6giba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_it2cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eomki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w13lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p4kxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_61f12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3lnth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mqv6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_77ggi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2vtdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tlprn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gwvgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_niowl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_81q4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4auai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2rkxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ympx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_q4jne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_h1oxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_dixm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jp6ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tejo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ox0nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7buco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6sscu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ryw00")
+}],
+"loop": false,
+"name": &"volteo",
+"speed": 1.5
+}]
+
+[node name="Carta" type="TextureButton"]
+custom_minimum_size = Vector2(100, 150)
+offset_right = 100.0
+offset_bottom = 150.0
+texture_normal = ExtResource("1_3x5xg")
+texture_pressed = ExtResource("2_1j3id")
+texture_hover = ExtResource("3_ytn5d")
+script = ExtResource("3_0xfsh")
+
+[node name="animacion_cartas" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.188, 0.188)
+sprite_frames = SubResource("SpriteFrames_e5bgs")
+animation = &"volteo"
+speed_scale = 60.0
+centered = false

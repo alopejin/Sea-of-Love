@@ -1,0 +1,156 @@
+[gd_scene load_steps=13 format=3 uid="uid://lg5i7hckis8y"]
+
+[ext_resource type="Script" uid="uid://b58dnkm8lyk01" path="res://juego1/scripts/juegocartas.gd" id="1_uvnef"]
+[ext_resource type="Texture2D" uid="uid://6xdu27qcc03f" path="res://juego1/assets/fondocartaschorra3.png" id="2_lfv7m"]
+[ext_resource type="AudioStream" uid="uid://cjt82ruhcyrjy" path="res://juego1/assets/FGB_ClickSofter.ogg" id="4_5dthf"]
+[ext_resource type="AudioStream" uid="uid://cxthlv6xqkcsn" path="res://juego1/assets/error-sound-39539.mp3" id="5_su7pi"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="7_8feql"]
+[ext_resource type="PackedScene" uid="uid://c1awhxu7uswiq" path="res://general/escenas/llave_desbloqueada.tscn" id="7_lfv7m"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="8_5km1d"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="8_su7pi"]
+[ext_resource type="PackedScene" uid="uid://c4a5fbk6lydfb" path="res://general/escenas/pausa.tscn" id="9_5dthf"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="9_pvyhu"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="10_rojr2"]
+[ext_resource type="AudioStream" uid="uid://db0ij5twyk58h" path="res://juego1/assets/sonidos/adore - _did i tell u that i miss u_ (lyric video) [ekW-i0KlU1U].mp3" id="10_su7pi"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uvnef")
+
+[node name="Fondo_juego" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lfv7m")
+expand_mode = 1
+
+[node name="Cartas" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -250.0
+offset_bottom = 250.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Sonido_click_cartas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5dthf")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_fallo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_su7pi")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Llave_desbloqueada" parent="." instance=ExtResource("7_lfv7m")]
+
+[node name="Boton_reiniciar" type="TextureButton" parent="."]
+process_mode = 3
+texture_filter = 1
+layout_mode = 0
+offset_left = 578.0
+offset_top = 541.0
+offset_right = 797.0
+offset_bottom = 632.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("8_su7pi")
+texture_hover = ExtResource("7_8feql")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Boton_reiniciar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 27.0
+offset_top = 30.0
+offset_right = 189.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("9_pvyhu")
+theme_override_font_sizes/font_size = 22
+text = "Jugar   de   nuevo"
+
+[node name="Boton_salir" type="TextureButton" parent="."]
+process_mode = 3
+texture_filter = 1
+layout_mode = 0
+offset_left = 366.0
+offset_top = 541.0
+offset_right = 523.0
+offset_bottom = 635.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("8_5km1d")
+texture_hover = ExtResource("10_rojr2")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.0
+offset_top = 30.0
+offset_right = 113.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("9_pvyhu")
+theme_override_font_sizes/font_size = 26
+text = "Salir"
+
+[node name="Pausa" parent="." instance=ExtResource("9_5dthf")]
+
+[node name="Musica" type="AudioStreamPlayer" parent="Pausa"]
+process_mode = 3
+stream = ExtResource("10_su7pi")
+volume_db = -20.0
+bus = &"Musica"
+parameters/looping = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="Label_timer" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 910.0
+offset_top = 30.0
+offset_right = 1120.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("9_pvyhu")
+theme_override_font_sizes/font_size = 25
+text = "Tiempo    restante:"
+
+[node name="Label_tiempo" type="Label" parent="Label_timer"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("9_pvyhu")
+theme_override_font_sizes/font_size = 45
+text = "60"
+
+[node name="Label_resultado" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 932.0
+offset_top = 128.0
+offset_right = 1142.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("9_pvyhu")
+theme_override_font_sizes/font_size = 25
+text = "Has    perdido   :("
+
+[connection signal="pressed" from="Boton_reiniciar" to="." method="reiniciar"]
+[connection signal="pressed" from="Boton_salir" to="." method="salir"]
+[connection signal="timeout" from="Timer" to="." method="derrota"]
