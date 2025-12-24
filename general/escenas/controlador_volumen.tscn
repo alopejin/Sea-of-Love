@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgnygaxdbs60e"]
+
+[ext_resource type="Script" uid="uid://bi4a7kr1adp1p" path="res://general/scripts/controlador_volumen.gd" id="1_lnst5"]
+
+[node name="controlador_volumen" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_lnst5")

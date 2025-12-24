@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4a5fbk6lydfb"]
+
+[ext_resource type="Script" uid="uid://ycitquypewit" path="res://general/scripts/pausa.gd" id="1_m4r1c"]
+[ext_resource type="Texture2D" uid="uid://bom3ld1u71up2" path="res://general/assets/panel_pausa.png" id="2_6afa2"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="4_vvl0g"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="5_ju4hg"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="5_og23b"]
+[ext_resource type="PackedScene" uid="uid://b0ixoxsae1n7j" path="res://general/escenas/ajustes.tscn" id="6_uqg16"]
+[ext_resource type="AudioStream" uid="uid://bnir1m8np8g7x" path="res://general/assets/sonido/ui-sound-2-374229.mp3" id="7_vvl0g"]
+[ext_resource type="AudioStream" uid="uid://bo67na0q2sa8f" path="res://general/assets/sonido/menu-selection-102220.mp3" id="8_og23b"]
+
+[node name="Pausa" type="Node"]
+process_mode = 3
+script = ExtResource("1_m4r1c")
+
+[node name="Menu_pausa" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Fondo_pausa" type="TextureRect" parent="Menu_pausa"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6afa2")
+metadata/_edit_group_ = true
+
+[node name="Label_pausa" type="Label" parent="Menu_pausa/Fondo_pausa"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 33.0
+offset_right = 306.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("4_vvl0g")
+theme_override_font_sizes/font_size = 30
+text = "Juego  pausado"
+
+[node name="Boton_reiniciar" type="TextureButton" parent="Menu_pausa"]
+offset_left = 496.00003
+offset_top = 353.99997
+offset_right = 653.3334
+offset_bottom = 444.99997
+scale = Vector2(1.04772, 0.7823422)
+texture_normal = ExtResource("5_og23b")
+texture_hover = ExtResource("5_ju4hg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_pausa/Boton_reiniciar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.985107
+offset_top = 30.944855
+offset_right = 198.9851
+offset_bottom = 53.944855
+scale = Vector2(0.7469377, 1.0694975)
+theme_override_fonts/font = ExtResource("4_vvl0g")
+theme_override_font_sizes/font_size = 22
+text = "Reiniciar"
+
+[node name="Boton_ajustes" type="TextureButton" parent="Menu_pausa"]
+offset_left = 496.00003
+offset_top = 258.0
+offset_right = 653.33
+offset_bottom = 349.0
+scale = Vector2(1.048, 0.782)
+texture_normal = ExtResource("5_og23b")
+texture_hover = ExtResource("5_ju4hg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_pausa/Boton_ajustes"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.916016
+offset_top = 29.836304
+offset_right = 208.91602
+offset_bottom = 52.836304
+scale = Vector2(0.747, 1.069)
+theme_override_fonts/font = ExtResource("4_vvl0g")
+theme_override_font_sizes/font_size = 22
+text = "Ajustes"
+
+[node name="Boton_reanudar" type="TextureButton" parent="Menu_pausa"]
+offset_left = 496.00003
+offset_top = 167.0
+offset_right = 653.33
+offset_bottom = 258.0
+scale = Vector2(1.048, 0.782)
+texture_normal = ExtResource("5_og23b")
+texture_hover = ExtResource("5_ju4hg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_pausa/Boton_reanudar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.916016
+offset_top = 29.836319
+offset_right = 204.91602
+offset_bottom = 52.83632
+scale = Vector2(0.747, 1.069)
+theme_override_fonts/font = ExtResource("4_vvl0g")
+theme_override_font_sizes/font_size = 22
+text = "Reanudar"
+
+[node name="Boton_salir" type="TextureButton" parent="Menu_pausa"]
+offset_left = 516.0
+offset_top = 462.0
+offset_right = 673.0
+offset_bottom = 553.0
+scale = Vector2(0.77326226, 0.6775416)
+texture_normal = ExtResource("5_og23b")
+texture_hover = ExtResource("5_ju4hg")
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="Menu_pausa/Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 45.262756
+offset_top = 29.518372
+offset_right = 171.26276
+offset_bottom = 94.51837
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("4_vvl0g")
+theme_override_font_sizes/font_size = 20
+text = "Salir"
+
+[node name="Ajustes" parent="." instance=ExtResource("6_uqg16")]
+
+[node name="Sonido_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vvl0g")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_og23b")
+volume_db = -10.0
+bus = &"Efectos"
+
+[connection signal="pressed" from="Menu_pausa/Boton_reiniciar" to="." method="reiniciar"]
+[connection signal="pressed" from="Menu_pausa/Boton_ajustes" to="." method="abrir_ajustes"]
+[connection signal="pressed" from="Menu_pausa/Boton_reanudar" to="." method="reanudar"]
+[connection signal="pressed" from="Menu_pausa/Boton_salir" to="." method="salir"]

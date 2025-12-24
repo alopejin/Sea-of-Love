@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr227oen5rgm3"]
+
+[sub_resource type="Environment" id="Environment_pg0xa"]
+background_mode = 3
+adjustment_enabled = true
+
+[node name="colores_pantalla" type="WorldEnvironment"]
+environment = SubResource("Environment_pg0xa")

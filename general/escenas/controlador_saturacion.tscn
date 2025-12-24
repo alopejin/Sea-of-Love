@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctr5nnk3v4glj"]
+
+[ext_resource type="Script" uid="uid://wv8u7nxfycfm" path="res://general/scripts/controlador_saturacion.gd" id="1_74qey"]
+
+[node name="controlador_saturacion" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+min_value = 0.01
+max_value = 3.0
+step = 0.01
+value = 1.0
+script = ExtResource("1_74qey")
+
+[connection signal="value_changed" from="." to="." method="ajustar_saturacion"]

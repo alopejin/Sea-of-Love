@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1awhxu7uswiq"]
+
+[ext_resource type="Script" uid="uid://dfipvxkc7n65e" path="res://general/scripts/llave_desbloqueada.gd" id="1_3rqty"]
+[ext_resource type="Texture2D" uid="uid://ddaukc08b11te" path="res://menu_principal/assets/llave2-tamaño-ajustado.png" id="2_dxehc"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="3_gq5aq"]
+[ext_resource type="AudioStream" uid="uid://dcmbjc6eo4rif" path="res://general/assets/sonido/ringtones-zelda-1.mp3" id="4_dxehc"]
+
+[sub_resource type="Animation" id="Animation_hb4xa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-173, 398)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3rqty"]
+resource_name = "desbloqueo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173, 398), Vector2(540, 333.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5730038]
+}
+
+[sub_resource type="Animation" id="Animation_0fhiu"]
+resource_name = "desplazamiento"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173, 398), Vector2(577, 342)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5725178]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf6o7"]
+_data = {
+&"RESET": SubResource("Animation_hb4xa"),
+&"desbloqueo": SubResource("Animation_3rqty"),
+&"desplazamiento": SubResource("Animation_0fhiu")
+}
+
+[node name="Llave_desbloqueada" type="Node"]
+script = ExtResource("1_3rqty")
+
+[node name="LLave_imagen" type="TextureRect" parent="."]
+offset_left = -192.0
+offset_top = 400.0
+offset_right = -89.0
+offset_bottom = 557.00085
+texture = ExtResource("2_dxehc")
+
+[node name="Animacion_llave" type="AnimationPlayer" parent="LLave_imagen"]
+libraries = {
+&"": SubResource("AnimationLibrary_uf6o7")
+}
+
+[node name="Llave_texto" type="Label" parent="."]
+texture_filter = 1
+offset_left = 587.0
+offset_top = 363.0
+offset_right = 864.0
+offset_bottom = 397.0
+theme_override_colors/font_color = Color(1, 1, 0.02745098, 1)
+theme_override_fonts/font = ExtResource("3_gq5aq")
+theme_override_font_sizes/font_size = 25
+text = "¡ Llave    desbloqueada !"
+
+[node name="Sonido_desbloqueo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dxehc")
+volume_db = -30.0
+bus = &"Efectos"

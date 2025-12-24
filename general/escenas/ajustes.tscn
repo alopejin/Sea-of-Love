@@ -1,0 +1,380 @@
+[gd_scene load_steps=14 format=3 uid="uid://b0ixoxsae1n7j"]
+
+[ext_resource type="Script" uid="uid://dv5qfh2lrt5dx" path="res://general/scripts/ajustes.gd" id="1_7ph7c"]
+[ext_resource type="Texture2D" uid="uid://bom3ld1u71up2" path="res://general/assets/panel_pausa.png" id="1_8pnen"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="2_yvd6k"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="3_yvd6k"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="4_da0gl"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="5_5wxu3"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="5_q5nux"]
+[ext_resource type="PackedScene" uid="uid://cgnygaxdbs60e" path="res://general/escenas/controlador_volumen.tscn" id="5_ubrht"]
+[ext_resource type="PackedScene" uid="uid://cugkgbt5dlcqe" path="res://general/escenas/controlador_brillo.tscn" id="6_i454y"]
+[ext_resource type="PackedScene" uid="uid://b6x2sjgofg6yu" path="res://general/escenas/controlador_contraste.tscn" id="7_5wxu3"]
+[ext_resource type="AudioStream" uid="uid://bo67na0q2sa8f" path="res://general/assets/sonido/menu-selection-102220.mp3" id="7_m86rf"]
+[ext_resource type="PackedScene" uid="uid://ctr5nnk3v4glj" path="res://general/escenas/controlador_saturacion.tscn" id="8_q5nux"]
+[ext_resource type="Texture2D" uid="uid://d37jd4b5y7ucq" path="res://general/assets/tilde.png" id="12_7ydtf"]
+
+[node name="Ajustes" type="Node"]
+script = ExtResource("1_7ph7c")
+
+[node name="Opciones_ajustes" type="CanvasLayer" parent="."]
+
+[node name="Fondo_ajustes" type="TextureRect" parent="Opciones_ajustes"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8pnen")
+
+[node name="Label_ajustes" type="Label" parent="Opciones_ajustes/Fondo_ajustes"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 143.0
+offset_top = 33.0
+offset_right = 349.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 30
+text = "Ajustes"
+
+[node name="Boton_resolucion" type="TextureButton" parent="Opciones_ajustes"]
+offset_left = 469.0
+offset_top = 180.0
+offset_right = 684.0
+offset_bottom = 271.0
+texture_normal = ExtResource("4_da0gl")
+texture_hover = ExtResource("5_q5nux")
+
+[node name="Label" type="Label" parent="Opciones_ajustes/Boton_resolucion"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 60.0
+offset_top = 31.0
+offset_right = 222.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 22
+text = "Pantalla"
+
+[node name="Boton_sonido" type="TextureButton" parent="Opciones_ajustes"]
+offset_left = 469.0
+offset_top = 289.0
+offset_right = 688.0
+offset_bottom = 380.0
+texture_normal = ExtResource("4_da0gl")
+texture_hover = ExtResource("5_q5nux")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Opciones_ajustes/Boton_sonido"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 71.0
+offset_top = 29.0
+offset_right = 233.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 22
+text = "Sonido"
+
+[node name="Boton_volver" type="TextureButton" parent="Opciones_ajustes"]
+offset_left = 516.0
+offset_top = 462.0
+offset_right = 673.0
+offset_bottom = 553.0
+scale = Vector2(0.77326226, 0.6775416)
+texture_normal = ExtResource("3_yvd6k")
+texture_hover = ExtResource("5_5wxu3")
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="Opciones_ajustes/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.089844
+offset_top = 29.518372
+offset_right = 166.08984
+offset_bottom = 94.51837
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "Volver"
+
+[node name="Opciones_pantalla" type="CanvasLayer" parent="."]
+
+[node name="Fondo_pantalla" type="TextureRect" parent="Opciones_pantalla"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8pnen")
+metadata/_edit_group_ = true
+
+[node name="Label_pantalla" type="Label" parent="Opciones_pantalla/Fondo_pantalla"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 142.0
+offset_top = 33.0
+offset_right = 348.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 30
+text = "Pantalla"
+
+[node name="controlador_brillo" parent="Opciones_pantalla" instance=ExtResource("6_i454y")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -127.0
+offset_right = 65.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Opciones_pantalla/controlador_brillo"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.0
+offset_top = -24.0
+offset_right = 89.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+text = "Brillo"
+
+[node name="controlador_contraste" parent="Opciones_pantalla" instance=ExtResource("7_5wxu3")]
+offset_left = 511.0
+offset_top = 253.0
+offset_right = 641.0
+offset_bottom = 269.0
+
+[node name="Label" type="Label" parent="Opciones_pantalla/controlador_contraste"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 23.0
+offset_top = -24.0
+offset_right = 102.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+text = "Contraste"
+
+[node name="controlador_saturacion" parent="Opciones_pantalla" instance=ExtResource("8_q5nux")]
+offset_left = 511.0
+offset_top = 307.0
+offset_right = 641.0
+offset_bottom = 323.0
+
+[node name="Label" type="Label" parent="Opciones_pantalla/controlador_saturacion"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = -29.0
+offset_right = 107.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+text = "Saturacion"
+
+[node name="Tilde" type="TextureRect" parent="Opciones_pantalla/controlador_saturacion/Label"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -1.0
+offset_right = 113.0
+offset_bottom = 39.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_7ydtf")
+
+[node name="Boton_ventana" type="CheckBox" parent="Opciones_pantalla"]
+texture_filter = 1
+offset_left = 513.0
+offset_top = 343.0
+offset_right = 650.0
+offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+text = "Modo     ventana"
+metadata/_edit_group_ = true
+
+[node name="Boton_predeterminados" type="TextureButton" parent="Opciones_pantalla"]
+offset_left = 501.99997
+offset_top = 386.00003
+offset_right = 659.0
+offset_bottom = 477.00003
+scale = Vector2(0.9501141, 0.57836133)
+texture_normal = ExtResource("3_yvd6k")
+texture_hover = ExtResource("5_5wxu3")
+
+[node name="Label_predeterminados" type="Label" parent="Opciones_pantalla/Boton_predeterminados"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.840088
+offset_top = 29.393341
+offset_right = 181.84009
+offset_bottom = 94.39334
+scale = Vector2(0.93491405, 1.5102937)
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 16
+text = "Predeterminados
+"
+
+[node name="Boton_volver" type="TextureButton" parent="Opciones_pantalla"]
+offset_left = 516.0
+offset_top = 462.0
+offset_right = 673.0
+offset_bottom = 553.0
+scale = Vector2(0.77326226, 0.6775416)
+texture_normal = ExtResource("3_yvd6k")
+texture_hover = ExtResource("5_5wxu3")
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="Opciones_pantalla/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.089844
+offset_top = 29.518372
+offset_right = 166.08984
+offset_bottom = 94.51837
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "Volver"
+
+[node name="Opciones_sonido" type="CanvasLayer" parent="."]
+
+[node name="Fondo_sonido" type="TextureRect" parent="Opciones_sonido"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8pnen")
+
+[node name="Label_sonido" type="Label" parent="Opciones_sonido/Fondo_sonido"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 148.0
+offset_top = 33.0
+offset_right = 354.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 30
+text = "Sonido"
+
+[node name="General" parent="Opciones_sonido" instance=ExtResource("5_ubrht")]
+offset_left = 497.0
+offset_top = 206.0
+offset_right = 657.0
+offset_bottom = 222.0
+bus_nombre = "Master"
+metadata/_edit_group_ = true
+
+[node name="Label_general" type="Label" parent="Opciones_sonido/General"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.0
+offset_top = -24.0
+offset_right = 119.0
+offset_bottom = -3.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "General"
+
+[node name="Musica" parent="Opciones_sonido" instance=ExtResource("5_ubrht")]
+offset_left = 497.0
+offset_top = 285.0
+offset_right = 657.0
+offset_bottom = 301.0
+bus_nombre = "Musica"
+metadata/_edit_group_ = true
+
+[node name="Label_musica" type="Label" parent="Opciones_sonido/Musica"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 43.0
+offset_top = -34.0
+offset_right = 109.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "Musica"
+
+[node name="Tilde" type="TextureRect" parent="Opciones_sonido/Musica/Label_musica"]
+layout_mode = 0
+offset_left = 15.000024
+offset_top = 1.0
+offset_right = 55.000023
+offset_bottom = 41.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_7ydtf")
+
+[node name="Efectos" parent="Opciones_sonido" instance=ExtResource("5_ubrht")]
+offset_left = 497.0
+offset_top = 367.0
+offset_right = 657.0
+offset_bottom = 383.0
+bus_nombre = "Efectos"
+metadata/_edit_group_ = true
+
+[node name="Label_efectos" type="Label" parent="Opciones_sonido/Efectos"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = -31.0
+offset_right = 118.0
+offset_bottom = -10.0
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "Efectos"
+
+[node name="Boton_volver" type="TextureButton" parent="Opciones_sonido"]
+offset_left = 516.0
+offset_top = 462.0
+offset_right = 673.0
+offset_bottom = 553.0
+scale = Vector2(0.77326226, 0.6775416)
+texture_normal = ExtResource("3_yvd6k")
+texture_hover = ExtResource("5_5wxu3")
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="Opciones_sonido/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.089844
+offset_top = 29.518372
+offset_right = 166.08984
+offset_bottom = 94.51837
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_yvd6k")
+theme_override_font_sizes/font_size = 20
+text = "Volver"
+
+[node name="Sonido_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_m86rf")
+volume_db = -10.0
+bus = &"Efectos"
+
+[connection signal="pressed" from="Opciones_ajustes/Boton_resolucion" to="." method="mostrar_ajustes_pantalla"]
+[connection signal="pressed" from="Opciones_ajustes/Boton_sonido" to="." method="mostrar_ajustes_sonido"]
+[connection signal="pressed" from="Opciones_ajustes/Boton_volver" to="." method="volver_menu_principal"]
+[connection signal="toggled" from="Opciones_pantalla/Boton_ventana" to="." method="modo_ventana"]
+[connection signal="pressed" from="Opciones_pantalla/Boton_predeterminados" to="." method="pantalla_predeterminados"]
+[connection signal="pressed" from="Opciones_pantalla/Boton_volver" to="." method="cerrar_ajustes_pantalla"]
+[connection signal="pressed" from="Opciones_sonido/Boton_volver" to="." method="salir_ajustes_sonido"]

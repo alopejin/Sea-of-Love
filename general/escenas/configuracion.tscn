@@ -1,0 +1,366 @@
+[gd_scene load_steps=18 format=3 uid="uid://dbjavd8yv5cjf"]
+
+[ext_resource type="Script" uid="uid://3asr28454wfk" path="res://general/scripts/configuracion.gd" id="1_cedgc"]
+[ext_resource type="Texture2D" uid="uid://n21j8y6k8cnx" path="res://menu_principal/assets/boton_configuracion.png" id="2_cedgc"]
+[ext_resource type="Texture2D" uid="uid://bom3ld1u71up2" path="res://general/assets/panel_pausa.png" id="3_553x3"]
+[ext_resource type="Texture2D" uid="uid://dstglc8w52gmm" path="res://menu_principal/assets/boton_configuracion_bueno_fusionado_rotado_ajustado_hover.png" id="3_rkbke"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="4_n5qmr"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="5_wafi4"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="6_7xqb5"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="6_mhnet"]
+[ext_resource type="PackedScene" uid="uid://b0ixoxsae1n7j" path="res://general/escenas/ajustes.tscn" id="7_h67mb"]
+[ext_resource type="Texture2D" uid="uid://bck7xwsa2c04l" path="res://general/assets/panel_dificultad.png" id="7_mhnet"]
+[ext_resource type="AudioStream" uid="uid://hd6the6vuymg" path="res://general/assets/sonido/on-001-337979.mp3" id="8_7kj8v"]
+[ext_resource type="AudioStream" uid="uid://bo67na0q2sa8f" path="res://general/assets/sonido/menu-selection-102220.mp3" id="8_h67mb"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="8_rkbke"]
+[ext_resource type="FontFile" uid="uid://cwrh1xg8buxoe" path="res://general/assets/Yulong-Regular.otf" id="11_k21yp"]
+[ext_resource type="Texture2D" uid="uid://xkdsj8bh2wuc" path="res://general/assets/boton_base2_dificil.png" id="12_4tid6"]
+[ext_resource type="Texture2D" uid="uid://b8alrfl54be6e" path="res://general/assets/boton_base2_facil.png" id="13_tpncr"]
+[ext_resource type="Texture2D" uid="uid://d37jd4b5y7ucq" path="res://general/assets/tilde.png" id="14_tpncr"]
+
+[node name="Configuracion" type="Node"]
+script = ExtResource("1_cedgc")
+
+[node name="Boton_configuracion" type="TextureButton" parent="."]
+offset_left = 1059.0
+offset_top = 522.0
+offset_right = 1293.0
+offset_bottom = 761.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_cedgc")
+texture_hover = ExtResource("3_rkbke")
+metadata/_edit_group_ = true
+
+[node name="Menu_configuracion" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Menu_configuracion"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_553x3")
+
+[node name="Label_configuracion" type="Label" parent="Menu_configuracion/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 94.0
+offset_top = 33.0
+offset_right = 310.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 30
+text = "Configuracion"
+
+[node name="Boton_dificultad" type="TextureButton" parent="Menu_configuracion"]
+offset_left = 496.00003
+offset_top = 179.0
+offset_right = 715.0
+offset_bottom = 270.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("5_wafi4")
+texture_hover = ExtResource("6_7xqb5")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_configuracion/Boton_dificultad"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 51.333313
+offset_top = 31.333221
+offset_right = 213.33331
+offset_bottom = 54.33322
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 22
+text = "Dificultad"
+
+[node name="Boton_ajustes" type="TextureButton" parent="Menu_configuracion"]
+offset_left = 496.00003
+offset_top = 261.0
+offset_right = 715.0
+offset_bottom = 352.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("5_wafi4")
+texture_hover = ExtResource("6_7xqb5")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_configuracion/Boton_ajustes"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 66.0
+offset_top = 31.333344
+offset_right = 228.0
+offset_bottom = 54.333344
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 22
+text = "Ajustes"
+
+[node name="Boton_creditos" type="TextureButton" parent="Menu_configuracion"]
+offset_left = 495.0
+offset_top = 347.0
+offset_right = 714.0
+offset_bottom = 438.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("5_wafi4")
+texture_hover = ExtResource("6_7xqb5")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_configuracion/Boton_creditos"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 60.99994
+offset_top = 31.333374
+offset_right = 222.99994
+offset_bottom = 61.333374
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 22
+text = "Creditos"
+
+[node name="Tilde" type="TextureRect" parent="Menu_configuracion/Boton_creditos/Label"]
+layout_mode = 0
+offset_left = 29.666504
+offset_top = -2.0
+offset_right = 69.666504
+offset_bottom = 38.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("14_tpncr")
+
+[node name="Boton_salir" type="TextureButton" parent="Menu_configuracion"]
+offset_left = 516.0
+offset_top = 462.0
+offset_right = 673.0
+offset_bottom = 553.0
+scale = Vector2(0.77326226, 0.6775416)
+texture_normal = ExtResource("6_mhnet")
+texture_hover = ExtResource("8_rkbke")
+metadata/_edit_group_ = true
+
+[node name="Label_volver" type="Label" parent="Menu_configuracion/Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.08992
+offset_top = 29.518524
+offset_right = 166.08992
+offset_bottom = 94.518524
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 20
+text = "Cerrar"
+
+[node name="Menu_dificultad" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Menu_dificultad"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.5
+offset_top = -175.5
+offset_right = 230.5
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_mhnet")
+metadata/_edit_group_ = true
+
+[node name="Label_dificultad" type="Label" parent="Menu_dificultad/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 148.5
+offset_top = 30.5
+offset_right = 313.5
+offset_bottom = 61.5
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 30
+text = "Dificultad"
+
+[node name="Label_descripcion" type="Label" parent="Menu_dificultad/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.5
+offset_top = 88.5
+offset_right = 698.5
+offset_bottom = 139.5
+scale = Vector2(0.85, 0.85)
+theme_override_fonts/font = ExtResource("11_k21yp")
+theme_override_font_sizes/font_size = 24
+text = "Elige  sabiamente,  una  vez  elegida  no  podrás  cambiarla  
+sin  reiniciar  todo  el  progreso."
+
+[node name="Boton_300IQ" type="TextureButton" parent="Menu_dificultad"]
+offset_left = 379.00003
+offset_top = 326.00003
+offset_right = 595.25
+offset_bottom = 417.00003
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("5_wafi4")
+texture_pressed = ExtResource("12_4tid6")
+texture_hover = ExtResource("6_7xqb5")
+
+[node name="Label" type="Label" parent="Menu_dificultad/Boton_300IQ"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.250008
+offset_top = 32.5
+offset_right = 198.25
+offset_bottom = 62.5
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 18
+text = "Pro  gamer  300IQ"
+
+[node name="Boton_noob" type="TextureButton" parent="Menu_dificultad"]
+offset_left = 600.00006
+offset_top = 326.00003
+offset_right = 819.00006
+offset_bottom = 417.00003
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("5_wafi4")
+texture_pressed = ExtResource("13_tpncr")
+texture_hover = ExtResource("6_7xqb5")
+
+[node name="Label" type="Label" parent="Menu_dificultad/Boton_noob"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.25
+offset_top = 32.5
+offset_right = 236.25
+offset_bottom = 55.5
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 17
+text = "No  tengo  brazos  bro"
+
+[node name="Boton_volver" type="TextureButton" parent="Menu_dificultad"]
+offset_left = 528.0
+offset_top = 422.0
+offset_right = 685.0
+offset_bottom = 513.0
+scale = Vector2(0.5554758, 0.49243346)
+texture_normal = ExtResource("6_mhnet")
+texture_hover = ExtResource("8_rkbke")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Menu_dificultad/Boton_volver"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.28955
+offset_top = 29.518372
+offset_right = 164.28955
+offset_bottom = 94.51834
+scale = Vector2(1.0187664, 1.1775752)
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 23
+text = "Volver"
+
+[node name="Creditos" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Creditos"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.5
+offset_top = -175.5
+offset_right = 230.5
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_mhnet")
+metadata/_edit_group_ = true
+
+[node name="Label_creditos" type="Label" parent="Creditos/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 173.5
+offset_top = 37.5
+offset_right = 338.5
+offset_bottom = 78.5
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 30
+text = "Creditos"
+
+[node name="Tilde" type="TextureRect" parent="Creditos/TextureRect/Label_creditos"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 1.0
+offset_right = 81.0
+offset_bottom = 41.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("14_tpncr")
+
+[node name="Label_descripcion" type="Label" parent="Creditos/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.5
+offset_top = 88.5
+offset_right = 724.5
+offset_bottom = 255.5
+scale = Vector2(0.9, 0.9)
+theme_override_fonts/font = ExtResource("11_k21yp")
+theme_override_font_sizes/font_size = 24
+text = "Juego  realizado  por  el  increíble,  apasionado, maravilloso,   
+legendario, espectakular, ilustre, audaz, poético, intelectual, 
+atemporal, grandioso, sublime, sensual, astuto, ejemplar,
+('Insertar cumplido'), prodigioso, excepcional, sensacional   
+y humilde:
+"
+
+[node name="Label_autor" type="Label" parent="Creditos/TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 185.5
+offset_top = 212.5
+offset_right = 350.5
+offset_bottom = 253.5
+theme_override_colors/font_color = Color(1, 1, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 22
+text = "Alopejin"
+
+[node name="Boton_flipao" type="TextureButton" parent="Creditos"]
+offset_left = 529.00006
+offset_top = 409.00003
+offset_right = 686.00006
+offset_bottom = 500.00003
+scale = Vector2(0.6, 0.488)
+texture_normal = ExtResource("6_mhnet")
+texture_hover = ExtResource("8_rkbke")
+
+[node name="Label_flipao" type="Label" parent="Creditos/Boton_flipao"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 31.858398
+offset_top = 28.139648
+offset_right = 157.8584
+offset_bottom = 93.13965
+theme_override_fonts/font = ExtResource("4_n5qmr")
+theme_override_font_sizes/font_size = 28
+text = "Flipao"
+
+[node name="Sonido_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7kj8v")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_h67mb")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Ajustes" parent="." instance=ExtResource("7_h67mb")]
+
+[connection signal="pressed" from="Boton_configuracion" to="." method="abrir_configuracion"]
+[connection signal="pressed" from="Menu_configuracion/Boton_dificultad" to="." method="abrir_dificultad"]
+[connection signal="pressed" from="Menu_configuracion/Boton_ajustes" to="." method="abrir_ajustes"]
+[connection signal="pressed" from="Menu_configuracion/Boton_creditos" to="." method="abrir_creditos"]
+[connection signal="pressed" from="Menu_configuracion/Boton_salir" to="." method="cerrar_configuracion"]
+[connection signal="pressed" from="Menu_dificultad/Boton_300IQ" to="." method="dificultad_dificil"]
+[connection signal="pressed" from="Menu_dificultad/Boton_noob" to="." method="dificultad_facil"]
+[connection signal="pressed" from="Menu_dificultad/Boton_volver" to="." method="cerrar_dificultad"]
+[connection signal="pressed" from="Creditos/Boton_flipao" to="." method="cerrar_creditos"]
