@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjnn4c6lfa3f2"
+path="res://.godot/imported/Tubular Bells (Pt. I) - Mike Oldfield.mp3-02974b13da7b13b971eeeca595523509.mp3str"
+
+[deps]
+
+source_file="res://juego3/assets/sonidos/Tubular Bells (Pt. I) - Mike Oldfield.mp3"
+dest_files=["res://.godot/imported/Tubular Bells (Pt. I) - Mike Oldfield.mp3-02974b13da7b13b971eeeca595523509.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,458 @@
+[gd_scene load_steps=42 format=3 uid="uid://bwb0qw5bos3tl"]
+
+[ext_resource type="Texture2D" uid="uid://c8yxgmv2b75jl" path="res://juego2/assets/animaciones/set3.png" id="1_28kya"]
+[ext_resource type="Script" uid="uid://dy3x7464s02m1" path="res://juego3/scripts/mar_zombies.gd" id="1_pyvbp"]
+[ext_resource type="AudioStream" uid="uid://b4326rmd8u4if" path="res://juego2/assets/sonidos/swing-whoosh-110410.mp3" id="3_1jam6"]
+[ext_resource type="Texture2D" uid="uid://vl5i1cne7pvw" path="res://juego3/assets/vestido-verde-sangriento3-muerta.png" id="3_5l7wp"]
+[ext_resource type="Texture2D" uid="uid://04gqbgi2p708" path="res://juego3/assets/vestido-verde-sangriento1.png" id="3_ba8h6"]
+[ext_resource type="Texture2D" uid="uid://bw6v74nw4qoqq" path="res://juego3/assets/vestido-verde.png" id="3_tdf7e"]
+[ext_resource type="Texture2D" uid="uid://bty7ll53ghkps" path="res://juego3/assets/vestido-verde-sangriento2.png" id="4_5l7wp"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="5_pvuva"]
+[ext_resource type="AudioStream" uid="uid://coqb62f3m5p60" path="res://juego3/assets/sonidos/woman-scream-136558.mp3" id="6_ttsln"]
+[ext_resource type="PackedScene" uid="uid://bpj4hwr6txjrd" path="res://juego3/escenas/mp_40_2.tscn" id="8_8huxr"]
+[ext_resource type="AudioStream" uid="uid://k1y5gxyhohqv" path="res://juego3/assets/sonidos/grunt-85990.mp3" id="8_pr74v"]
+[ext_resource type="PackedScene" uid="uid://dj81cv8p5cx4p" path="res://juego3/escenas/escopeta.tscn" id="8_usxe3"]
+[ext_resource type="PackedScene" uid="uid://bp6thjjox7dsj" path="res://juego3/escenas/revolver2.tscn" id="12_8huxr"]
+[ext_resource type="AudioStream" uid="uid://clvf8pe3xdcwc" path="res://juego3/assets/sonidos/heartbeat-01-brvhrtz-225058.mp3" id="14_l2r2r"]
+[ext_resource type="AudioStream" uid="uid://cvh15nt46j54d" path="res://juego3/assets/sonidos/woman-sigh-101931.mp3" id="15_estyr"]
+[ext_resource type="Texture2D" uid="uid://d4m0f3cga1q82" path="res://juego3/assets/escudo1-ajustado.png" id="15_rsiyu"]
+[ext_resource type="AudioStream" uid="uid://5db1kjfxhr02" path="res://juego3/assets/sonidos/rayo-laser-101851.mp3" id="16_76obw"]
+[ext_resource type="AudioStream" uid="uid://byrh8bh31y57b" path="res://juego3/assets/sonidos/shutdown-386182.mp3" id="17_jgxxc"]
+[ext_resource type="AudioStream" uid="uid://jauduq5sni55" path="res://juego3/assets/sonidos/blaster-shot-229313.mp3" id="18_76obw"]
+
+[sub_resource type="Animation" id="Animation_tdf7e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31, -165)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ttsln"]
+resource_name = "compra"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-39, -165), Vector2(-39, -315)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_pr74v"]
+resource_name = "compra_invertida"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-56, -165), Vector2(-56, -314)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pr74v"]
+_data = {
+&"RESET": SubResource("Animation_tdf7e"),
+&"compra": SubResource("Animation_ttsln"),
+&"compra_invertida": SubResource("Animation_pr74v")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3i1a"]
+atlas = ExtResource("1_28kya")
+region = Rect2(0, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14jm6"]
+atlas = ExtResource("1_28kya")
+region = Rect2(300, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etepx"]
+atlas = ExtResource("3_5l7wp")
+region = Rect2(300, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb5ma"]
+atlas = ExtResource("3_5l7wp")
+region = Rect2(0, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usxe3"]
+atlas = ExtResource("3_ba8h6")
+region = Rect2(300, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8huxr"]
+atlas = ExtResource("3_ba8h6")
+region = Rect2(0, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsiyu"]
+atlas = ExtResource("4_5l7wp")
+region = Rect2(300, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2r2r"]
+atlas = ExtResource("4_5l7wp")
+region = Rect2(0, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymikp"]
+atlas = ExtResource("3_tdf7e")
+region = Rect2(300, 0, 300, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr74v"]
+atlas = ExtResource("3_tdf7e")
+region = Rect2(0, 0, 300, 350)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imd01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3i1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14jm6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etepx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb5ma")
+}],
+"loop": true,
+"name": &"muerta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usxe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8huxr")
+}],
+"loop": false,
+"name": &"sangriento1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsiyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2r2r")
+}],
+"loop": false,
+"name": &"sangriento2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymikp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr74v")
+}],
+"loop": false,
+"name": &"vestido_verde",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8huxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_usxe3"]
+resource_name = "muerte2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5398088]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(254, 114)]
+}
+
+[sub_resource type="Animation" id="Animation_5l7wp"]
+resource_name = "muerte"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5921417]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(8, 100.99999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_usxe3"]
+_data = {
+&"RESET": SubResource("Animation_8huxr"),
+&"muerte": SubResource("Animation_usxe3"),
+&"muertea_obsoleta": SubResource("Animation_5l7wp")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvuva"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tdf7e"]
+polygon = PackedVector2Array(-54, -53, -48, -84, -47, -138, -40, -157, -6, -172, 27, -173, 39, -170, 42, -163, 56, -151, 68, -133, 72, -115, 70, -100, 67, -84, 69, -65, 72, -46, 74, -37, 81, -15, 73, -12, 73, -1, 72, 8, 68, 25, 66, 36, 64, 87, 66, 102, 71, 120, 80, 149, 90, 162, 82, 165, 60, 163, 44, 159, 22, 158, -2, 161, -17, 164, -37, 169, -58, 172, -97, 172, -105, 166, -105, 162, -98, 155, -98, 155, -98, 155, -98, 155, -89, 142, -77, 124, -70, 107, -66, 94, -62, 71, -60, 40, -62, 29, -62, 10, -62, -16, -62, -16, -62, -16, -62, -16, -66, -30)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tdf7e"]
+
+[node name="mar_zombies" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_pyvbp")
+
+[node name="Compra" type="Label" parent="."]
+texture_filter = 1
+offset_left = -39.0
+offset_top = -165.0
+offset_right = 53.0
+offset_bottom = -116.0
+theme_override_colors/font_color = Color(0.627451, 0.05490196, 0, 1)
+theme_override_font_sizes/font_size = 35
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Compra"]
+libraries = {
+&"": SubResource("AnimationLibrary_pr74v")
+}
+
+[node name="mar_animacion" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_imd01")
+animation = &"muerta"
+
+[node name="Animaciones" type="AnimationPlayer" parent="mar_animacion"]
+libraries = {
+&"": SubResource("AnimationLibrary_usxe3")
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-118, 166, -96, 174, -58, 172, -22, 166, -2, 162, 16, 160, 34, 158, 52, 160, 72, 164, 84, 166, 108, 162, 86, 150, 76, 138, 70, 118, 66, 102, 64, 88, 64, 54, 66, 34, 72, 8, 72, -10, 80, -14, 80, -34, 74, -42, 60, -50, -32, -51, -56, -50, -56, -42, -66, -30, -64, -20, -62, -12, -62, 22, -60, 42, -62, 70, -66, 94, -76, 120, -88, 140, -96, 154, -102, 158)
+
+[node name="Revolver" parent="." instance=ExtResource("12_8huxr")]
+scale = Vector2(3, 3)
+
+[node name="Escopeta" parent="." instance=ExtResource("8_usxe3")]
+scale = Vector2(1.3, 1.3)
+
+[node name="MP40" parent="." instance=ExtResource("8_8huxr")]
+
+[node name="Contador_municion" type="Label" parent="."]
+texture_filter = 1
+offset_left = -216.0
+offset_top = -258.0
+offset_right = -176.0
+offset_bottom = -225.0
+theme_override_fonts/font = ExtResource("5_pvuva")
+theme_override_font_sizes/font_size = 32
+
+[node name="mar_zombies" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mar_zombies"]
+position = Vector2(5.9999995, -1)
+scale = Vector2(-8.578819, 19.03841)
+shape = SubResource("CircleShape2D_pvuva")
+
+[node name="Sonido_salto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1jam6")
+bus = &"Efectos"
+
+[node name="Grito_derrota" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_ttsln")
+bus = &"Efectos"
+
+[node name="Sonido_queja" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pr74v")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_salud_baja" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_l2r2r")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_curacion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_estyr")
+volume_db = -5.0
+
+[node name="Sonido_activar_escudo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_76obw")
+volume_db = 5.0
+
+[node name="Sonido_desactivar_escudo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_jgxxc")
+volume_db = -15.0
+
+[node name="Sonido_golpe_escudo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_76obw")
+volume_db = -15.0
+max_polyphony = 10
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_tdf7e")
+
+[node name="Barra_salud" type="ProgressBar" parent="."]
+visible = false
+modulate = Color(0.011764706, 1, 0.015686275, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_tdf7e")
+offset_left = -76.0
+offset_top = -206.0
+offset_right = 100.0
+offset_bottom = -179.0
+max_value = 500.0
+step = 50.0
+value = 500.0
+show_percentage = false
+
+[node name="Barra_escudo" type="ProgressBar" parent="."]
+visible = false
+modulate = Color(0.011764706, 1, 0.015686275, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_tdf7e")
+offset_left = -76.0
+offset_top = -206.0
+offset_right = 100.0
+offset_bottom = -179.0
+max_value = 500.0
+step = 50.0
+value = 500.0
+show_percentage = false
+
+[node name="Escudo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3, 18.999998)
+scale = Vector2(2.9366987, 3.020117)
+texture = ExtResource("15_rsiyu")
+
+[connection signal="value_changed" from="Barra_salud" to="." method="mostrar_vida"]
+[connection signal="value_changed" from="Barra_escudo" to="." method="mostrar_vida"]

@@ -1,0 +1,623 @@
+[gd_scene load_steps=36 format=3 uid="uid://cq63ihhut5e30"]
+
+[ext_resource type="Script" uid="uid://vplcykxbkgvx" path="res://juego3/scripts/main_zombies_2.gd" id="1_nwvyu"]
+[ext_resource type="Texture2D" uid="uid://du7spntlhu8e4" path="res://juego3/assets/suelo1-probando4.png" id="3_gqg2v"]
+[ext_resource type="Texture2D" uid="uid://cbni7t22la1hm" path="res://juego3/assets/parte_escenario-con-fondo1.png" id="4_yw5yh"]
+[ext_resource type="PackedScene" uid="uid://cdvv43s123kmq" path="res://juego3/escenas/tienda.tscn" id="5_bcxdk"]
+[ext_resource type="PackedScene" uid="uid://bwb0qw5bos3tl" path="res://juego3/escenas/mar_zombies.tscn" id="6_covff"]
+[ext_resource type="AudioStream" uid="uid://dtj10383wcnug" path="res://juego3/assets/sonidos/awesome-kick-drum-41824.mp3" id="7_ld7rp"]
+[ext_resource type="PackedScene" uid="uid://c4a5fbk6lydfb" path="res://general/escenas/pausa.tscn" id="8_hev5u"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="9_8m08v"]
+[ext_resource type="PackedScene" uid="uid://c1awhxu7uswiq" path="res://general/escenas/llave_desbloqueada.tscn" id="10_ffnhg"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="11_iv2op"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="12_vu20o"]
+[ext_resource type="Texture2D" uid="uid://bcxg2rrh5ge1r" path="res://general/assets/boton_base2.png" id="13_tqpl0"]
+[ext_resource type="Texture2D" uid="uid://cxxli8xgqcx4s" path="res://general/assets/boton_base2_hover.png" id="14_mp736"]
+[ext_resource type="AudioStream" uid="uid://c3e47d86v5hq5" path="res://juego3/assets/sonidos/Immigrant Song (Remaster) [y8OtzJtp-EM].mp3" id="15_5u72k"]
+[ext_resource type="AudioStream" uid="uid://dewecqnn1sobg" path="res://juego3/assets/sonidos/King Gnu - Prayer X - PERIMETRON.mp3" id="16_vdq6n"]
+[ext_resource type="AudioStream" uid="uid://cjnn4c6lfa3f2" path="res://juego3/assets/sonidos/Tubular Bells (Pt. I) - Mike Oldfield.mp3" id="17_pel75"]
+[ext_resource type="Texture2D" uid="uid://8n0lcjjos1wn" path="res://juego3/assets/tapa_zombies.png" id="18_idcqp"]
+[ext_resource type="Texture2D" uid="uid://du5jyduvtjqpp" path="res://juego3/assets/candelabro1.png" id="19_t8evu"]
+[ext_resource type="Texture2D" uid="uid://bw2mb2fi8lwmo" path="res://juego3/assets/animacion vela/vela2-1.png" id="20_y7cv1"]
+[ext_resource type="Texture2D" uid="uid://dwrw5k440xuoe" path="res://juego3/assets/animacion vela/vela2-2.png" id="21_p6yqw"]
+[ext_resource type="Texture2D" uid="uid://babvvpf2tbv0a" path="res://juego3/assets/animacion vela/vela2-3.png" id="22_i0jiy"]
+[ext_resource type="Texture2D" uid="uid://dq1ox54dm01yy" path="res://juego3/assets/animacion vela/vela2-4.png" id="23_3jf3k"]
+[ext_resource type="Texture2D" uid="uid://cf82pjqnofe1k" path="res://juego3/assets/candelabro_pared1.png" id="24_uqj7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rf8d"]
+size = Vector2(2351, 92)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lkg24"]
+
+[sub_resource type="Animation" id="Animation_lkg24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2ohuj"]
+resource_name = "dinero"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.178), Vector2(1, 1.071)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6duwi"]
+_data = {
+&"RESET": SubResource("Animation_lkg24"),
+&"dinero": SubResource("Animation_2ohuj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqqjl"]
+size = Vector2(40.77414, 109.870514)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0asp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_y7cv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p6yqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i0jiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3jf3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i0jiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p6yqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_y7cv1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_yqqjl"]
+offsets = PackedFloat32Array(0, 0.26143792, 0.5555556, 0.99346405, 1)
+colors = PackedColorArray(0.89411765, 0.89411765, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.083333254, 0.083333254, 0.083333254, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_icnvi"]
+gradient = SubResource("Gradient_yqqjl")
+fill = 1
+fill_from = Vector2(0.49769586, 0.50691247)
+fill_to = Vector2(0.79262674, 0.19354838)
+
+[sub_resource type="Animation" id="Animation_icnvi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.62]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_yqqjl"]
+resource_name = "luz"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.6, 3.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bsubj"]
+_data = {
+&"RESET": SubResource("Animation_icnvi"),
+&"luz": SubResource("Animation_yqqjl")
+}
+
+[node name="main_zombies" type="Node"]
+script = ExtResource("1_nwvyu")
+
+[node name="suelo_zombies" type="StaticBody2D" parent="."]
+position = Vector2(595, 601)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="suelo_zombies"]
+texture = ExtResource("3_gqg2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo_zombies"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_0rf8d")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_lkg24")
+position = Vector2(576, 324)
+texture = ExtResource("4_yw5yh")
+
+[node name="Tienda" parent="." instance=ExtResource("5_bcxdk")]
+position = Vector2(451, 494)
+
+[node name="mar_zombies" parent="." instance=ExtResource("6_covff")]
+z_index = 1
+scale = Vector2(0.3, 0.3)
+
+[node name="Sonido_ronda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ld7rp")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Pausa" parent="." instance=ExtResource("8_hev5u")]
+
+[node name="Label_ronda" type="Label" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 30
+
+[node name="Label_siguiente_ronda" type="Label" parent="."]
+texture_filter = 1
+offset_left = 508.0
+offset_top = 183.0
+offset_right = 659.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 41
+text = "Ronda   3"
+
+[node name="Label_zombies_eliminados" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 31.0
+offset_bottom = 73.0
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 30
+
+[node name="Label_headshots" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = 71.00001
+offset_right = 31.0
+offset_bottom = 102.00001
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(1, 0, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 30
+
+[node name="Label_dinero" type="Label" parent="."]
+texture_filter = 1
+offset_left = 2.0
+offset_top = 134.0
+offset_right = 42.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.011764706, 1, 0.09803922, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 25
+text = "tttttt"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label_dinero"]
+libraries = {
+&"": SubResource("AnimationLibrary_6duwi")
+}
+
+[node name="Label_derrota" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -63.5
+offset_right = 330.0
+offset_bottom = -32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 30
+text = "Has   fallecido   por    causas    no    muy   naturales"
+
+[node name="Salir_o_empezar" type="Node" parent="."]
+process_mode = 3
+
+[node name="Botones" type="CanvasLayer" parent="Salir_o_empezar"]
+
+[node name="Llave_desbloqueada" parent="Salir_o_empezar/Botones" instance=ExtResource("10_ffnhg")]
+
+[node name="Boton_salir" type="TextureButton" parent="Salir_o_empezar/Botones"]
+texture_filter = 1
+offset_left = 398.00003
+offset_top = 569.0
+offset_right = 555.0
+offset_bottom = 663.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("11_iv2op")
+texture_hover = ExtResource("12_vu20o")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Salir_o_empezar/Botones/Boton_salir"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 42.0
+offset_top = 30.0
+offset_right = 113.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 26
+text = "Salir"
+
+[node name="Boton_reiniciar" type="TextureButton" parent="Salir_o_empezar/Botones"]
+texture_filter = 1
+offset_left = 594.00006
+offset_top = 569.0
+offset_right = 813.00006
+offset_bottom = 660.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("13_tqpl0")
+texture_hover = ExtResource("14_mp736")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Salir_o_empezar/Botones/Boton_reiniciar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 27.0
+offset_top = 30.0
+offset_right = 189.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 22
+text = "Jugar   de   nuevo"
+
+[node name="Musica1" type="AudioStreamPlayer" parent="Salir_o_empezar"]
+stream = ExtResource("15_5u72k")
+volume_db = -20.0
+bus = &"Musica"
+
+[node name="Musica2" type="AudioStreamPlayer" parent="Salir_o_empezar"]
+stream = ExtResource("16_vdq6n")
+volume_db = -20.0
+bus = &"Musica"
+
+[node name="Musica3" type="AudioStreamPlayer" parent="Salir_o_empezar"]
+stream = ExtResource("17_pel75")
+volume_db = -15.0
+bus = &"Musica"
+
+[node name="Borde_izquierda" type="StaticBody2D" parent="."]
+position = Vector2(7.9999995, 484.00003)
+rotation = 3.1415927
+scale = Vector2(1.0791153, -1.2560232)
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Cubre_zombies1" type="Sprite2D" parent="Borde_izquierda"]
+z_index = 20
+texture = ExtResource("18_idcqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borde_izquierda"]
+position = Vector2(4.7683716e-07, 3.0517578e-05)
+shape = SubResource("RectangleShape2D_yqqjl")
+
+[node name="Borde_derecha" type="StaticBody2D" parent="."]
+position = Vector2(1144, 484.00003)
+rotation = 3.1415927
+scale = Vector2(1.0791153, -1.2560232)
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Cubre_zombies1" type="Sprite2D" parent="Borde_derecha"]
+z_index = 20
+texture = ExtResource("18_idcqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borde_derecha"]
+position = Vector2(4.7683716e-07, 3.0517578e-05)
+shape = SubResource("RectangleShape2D_yqqjl")
+
+[node name="Candelabro1" type="Sprite2D" parent="."]
+position = Vector2(828, 490)
+texture = ExtResource("19_t8evu")
+
+[node name="Vela1" type="AnimatedSprite2D" parent="Candelabro1"]
+position = Vector2(-45.99994, -33)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro1/Vela1"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro1/Vela1/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Vela2" type="AnimatedSprite2D" parent="Candelabro1"]
+position = Vector2(-2, -39)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro1/Vela2"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro1/Vela2/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Vela3" type="AnimatedSprite2D" parent="Candelabro1"]
+position = Vector2(45, -34.00003)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro1/Vela3"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro1/Vela3/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Candelabro2" type="Sprite2D" parent="."]
+position = Vector2(324, 490)
+texture = ExtResource("19_t8evu")
+
+[node name="Vela1" type="AnimatedSprite2D" parent="Candelabro2"]
+position = Vector2(-45.99994, -33)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro2/Vela1"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro2/Vela1/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Vela2" type="AnimatedSprite2D" parent="Candelabro2"]
+position = Vector2(-2, -39)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro2/Vela2"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro2/Vela2/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Vela3" type="AnimatedSprite2D" parent="Candelabro2"]
+position = Vector2(45, -34.00003)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro2/Vela3"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro2/Vela3/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Candelabro_pared1" type="Sprite2D" parent="."]
+position = Vector2(62, 365)
+texture = ExtResource("24_uqj7m")
+
+[node name="Vela" type="AnimatedSprite2D" parent="Candelabro_pared1"]
+position = Vector2(21.000008, -18)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.92779213
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro_pared1/Vela"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro_pared1/Vela/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Candelabro_pared2" type="Sprite2D" parent="."]
+position = Vector2(1085, 365)
+texture = ExtResource("24_uqj7m")
+flip_h = true
+
+[node name="Vela" type="AnimatedSprite2D" parent="Candelabro_pared2"]
+position = Vector2(-23.999878, -18)
+scale = Vector2(0.7054002, 0.5799924)
+sprite_frames = SubResource("SpriteFrames_a0asp")
+autoplay = "default"
+frame_progress = 0.24323566
+
+[node name="PointLight2D" type="PointLight2D" parent="Candelabro_pared2/Vela"]
+texture_filter = 1
+position = Vector2(4.2528915, -27.586609)
+scale = Vector2(2.1645293, 2.4981906)
+energy = 1.62
+texture = SubResource("GradientTexture2D_icnvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Candelabro_pared2/Vela/PointLight2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_bsubj")
+}
+autoplay = "luz"
+
+[node name="Label_salud" type="Label" parent="."]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 186.0
+offset_right = 93.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 25
+text = "Salud:"
+
+[node name="Barra_salud" type="ProgressBar" parent="Label_salud"]
+modulate = Color(0.8833141, 0, 0.06856303, 1)
+texture_filter = 1
+layout_mode = 0
+offset_top = 40.0
+offset_right = 176.0
+offset_bottom = 67.0
+max_value = 500.0
+step = 50.0
+value = 500.0
+show_percentage = false
+
+[node name="Label_cantidad" type="Label" parent="Label_salud"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = 42.0
+offset_right = 41.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[node name="Barra_escudo" type="ProgressBar" parent="."]
+modulate = Color(0.19220707, 0.45487726, 0.85788864, 1)
+texture_filter = 1
+offset_left = 3.0
+offset_top = 267.0
+offset_right = 179.0
+offset_bottom = 294.0
+max_value = 500.0
+step = 50.0
+value = 500.0
+show_percentage = false
+
+[node name="Label_cantidad_escudo" type="Label" parent="."]
+texture_filter = 1
+offset_left = 71.0
+offset_top = 269.0
+offset_right = 107.0
+offset_bottom = 292.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_8m08v")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Salir_o_empezar/Botones/Boton_salir" to="." method="salir"]
+[connection signal="pressed" from="Salir_o_empezar/Botones/Boton_reiniciar" to="." method="reiniciar"]
+[connection signal="value_changed" from="Label_salud/Barra_salud" to="." method="mostrar_salud"]
+[connection signal="value_changed" from="Barra_escudo" to="." method="mostrar_escudo"]

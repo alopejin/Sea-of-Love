@@ -1,0 +1,207 @@
+[gd_scene load_steps=15 format=3 uid="uid://c44un53cwukge"]
+
+[ext_resource type="Script" uid="uid://bxcfakkjip0py" path="res://juego3/scripts/zombie_2.gd" id="1_4cwqp"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="2_1t87m"]
+[ext_resource type="Texture2D" uid="uid://dsh4xs8igeywd" path="res://juego3/assets/zombie2-fusionado-ajustado.png" id="3_vkp58"]
+[ext_resource type="AudioStream" uid="uid://bu4g8xlyq2afl" path="res://juego2/assets/sonidos/hit-rock-01-266301.mp3" id="4_m8brs"]
+[ext_resource type="AudioStream" uid="uid://doowxwltyxq6c" path="res://juego3/assets/sonidos/086230_headshotwav-40654.mp3" id="5_ygpf6"]
+[ext_resource type="AudioStream" uid="uid://c172smx0rtgjt" path="res://juego3/assets/sonidos/growling-zombie-104988.mp3" id="6_n8bvt"]
+[ext_resource type="AudioStream" uid="uid://bxhtfs7air4vn" path="res://juego3/assets/sonidos/zombie-groan-95051.mp3" id="7_gn0ek"]
+[ext_resource type="AudioStream" uid="uid://whifxwerr5t0" path="res://juego3/assets/sonidos/zombie-roar-7-90409.mp3" id="8_gi4vk"]
+
+[sub_resource type="Animation" id="Animation_nwxn5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fer63"]
+resource_name = "dinero"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-25, -66), Vector2(-25, -96)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_2ijhm"]
+resource_name = "dinero_invertido"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5, -65), Vector2(-5, -97)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yepy"]
+_data = {
+&"RESET": SubResource("Animation_nwxn5"),
+&"dinero": SubResource("Animation_fer63"),
+&"dinero_invertido": SubResource("Animation_2ijhm")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i7lj"]
+size = Vector2(34, 97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bj4pq"]
+size = Vector2(26, 28)
+
+[node name="Zombie1" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 29
+collision_mask = 5
+script = ExtResource("1_4cwqp")
+metadata/_edit_group_ = true
+
+[node name="Dinero" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -25.0
+offset_top = -66.0
+offset_right = 2.0
+offset_bottom = -38.0
+theme_override_colors/font_color = Color(0.03137255, 1, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("2_1t87m")
+theme_override_font_sizes/font_size = 12
+text = "+50€"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dinero"]
+libraries = {
+&"": SubResource("AnimationLibrary_5yepy")
+}
+
+[node name="Textura_zombie" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_vkp58")
+
+[node name="Hitbox_cuerpo" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cuerpo"]
+position = Vector2(-10.5, 13.5)
+shape = SubResource("RectangleShape2D_8i7lj")
+
+[node name="Hitbox_cuerpo_invertida" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cuerpo_invertida"]
+position = Vector2(11, 13.5)
+shape = SubResource("RectangleShape2D_8i7lj")
+
+[node name="Hitbox_cabeza" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cabeza"]
+position = Vector2(-10, -49)
+shape = SubResource("RectangleShape2D_bj4pq")
+
+[node name="Hitbox_cabeza_invertida" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cabeza_invertida"]
+position = Vector2(10.5, -49)
+shape = SubResource("RectangleShape2D_bj4pq")
+
+[node name="Sonido_impacto_cuerpo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_m8brs")
+
+[node name="Sonido_headshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ygpf6")
+
+[node name="Animacion_ataque" type="AnimatedSprite2D" parent="."]
+
+[node name="Sonido_rugido1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_n8bvt")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_rugido2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_gn0ek")
+bus = &"Efectos"
+
+[node name="Sonido_rugido3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_gi4vk")
+bus = &"Efectos"
+
+[node name="Timer_ataque" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Timer_rugido" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="area_entered" from="Hitbox_cuerpo" to="." method="disparo_cuerpo"]
+[connection signal="body_entered" from="Hitbox_cuerpo" to="." method="ataque"]
+[connection signal="body_entered" from="Hitbox_cuerpo" to="." method="disparo_cuerpo"]
+[connection signal="body_exited" from="Hitbox_cuerpo" to="." method="ataque"]
+[connection signal="area_entered" from="Hitbox_cuerpo_invertida" to="." method="disparo_cuerpo"]
+[connection signal="body_entered" from="Hitbox_cuerpo_invertida" to="." method="disparo_cuerpo"]
+[connection signal="area_entered" from="Hitbox_cabeza" to="." method="disparo_cabeza"]
+[connection signal="body_entered" from="Hitbox_cabeza" to="." method="disparo_cabeza"]
+[connection signal="area_entered" from="Hitbox_cabeza_invertida" to="." method="disparo_cabeza"]
+[connection signal="body_entered" from="Hitbox_cabeza_invertida" to="." method="disparo_cabeza"]
+[connection signal="timeout" from="Timer_ataque" to="." method="confirmar_ataque"]
+[connection signal="timeout" from="Timer_rugido" to="." method="rugir"]

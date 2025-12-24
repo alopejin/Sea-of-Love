@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3e47d86v5hq5"
+path="res://.godot/imported/Immigrant Song (Remaster) [y8OtzJtp-EM].mp3-1fd6f865bc00bb135bd854bcfb8d6715.mp3str"
+
+[deps]
+
+source_file="res://juego3/assets/sonidos/Immigrant Song (Remaster) [y8OtzJtp-EM].mp3"
+dest_files=["res://.godot/imported/Immigrant Song (Remaster) [y8OtzJtp-EM].mp3-1fd6f865bc00bb135bd854bcfb8d6715.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

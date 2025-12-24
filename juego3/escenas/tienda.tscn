@@ -1,0 +1,257 @@
+[gd_scene load_steps=27 format=3 uid="uid://cdvv43s123kmq"]
+
+[ext_resource type="Script" uid="uid://q3jdcs4tmlec" path="res://juego3/scripts/tienda.gd" id="1_qmtjl"]
+[ext_resource type="AudioStream" uid="uid://c0u8kh2rcep3o" path="res://juego3/assets/sonidos/cash-register-kaching-sound-effect-125042.mp3" id="2_0bxgk"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="3_pxs42"]
+[ext_resource type="Texture2D" uid="uid://hvsykk3jov6i" path="res://juego3/assets/tienda2-1.png" id="4_0e7mp"]
+[ext_resource type="Texture2D" uid="uid://cw2xhdsujl1my" path="res://juego3/assets/tienda2_sin-relieve.png" id="5_rdvbt"]
+[ext_resource type="Texture2D" uid="uid://bc5bxx5xbnhi3" path="res://juego3/assets/panel_tienda.png" id="6_rdvbt"]
+[ext_resource type="Texture2D" uid="uid://b5ginsop8mols" path="res://juego3/assets/icono_municion_escopeta.png" id="7_5ls6g"]
+[ext_resource type="Texture2D" uid="uid://c5y1v2pl4jnmy" path="res://juego3/assets/icono_botiquin2.png" id="7_6owdy"]
+[ext_resource type="Texture2D" uid="uid://bus63yq37htw1" path="res://juego3/assets/icono_municion_fusionado.png" id="7_cem1i"]
+[ext_resource type="Texture2D" uid="uid://bj6wiilliflhf" path="res://juego3/assets/boton_tienda_derecha.png" id="8_5ls6g"]
+[ext_resource type="Texture2D" uid="uid://b12umbrouri32" path="res://juego3/assets/icono_escopeta.png" id="8_6owdy"]
+[ext_resource type="Texture2D" uid="uid://sn6qsdhpn0j2" path="res://juego3/assets/icono_municion_mp40.png" id="8_7r4ep"]
+[ext_resource type="Texture2D" uid="uid://ccjrql24k1fbp" path="res://general/assets/boton_base1.png" id="9_7r4ep"]
+[ext_resource type="Texture2D" uid="uid://dks2wnvcbowf1" path="res://juego3/assets/icono_escudo3.png" id="9_47fn5"]
+[ext_resource type="Texture2D" uid="uid://dt1xwiqjptphg" path="res://juego3/assets/icono_mp40.png" id="9_e053v"]
+[ext_resource type="Texture2D" uid="uid://caajgrw70vv54" path="res://juego3/assets/icono_cerrar_tienda.png" id="15_e053v"]
+[ext_resource type="Texture2D" uid="uid://cf1g47cb8vjyq" path="res://juego3/assets/boton_tienda_derecha_hover.png" id="15_g1idy"]
+[ext_resource type="Texture2D" uid="uid://clwea55pckvug" path="res://general/assets/boton_base1_hover.png" id="17_2havg"]
+[ext_resource type="AudioStream" uid="uid://dbdnd4b4vewrc" path="res://juego3/assets/sonidos/beep-313342.mp3" id="17_lqjb5"]
+[ext_resource type="AudioStream" uid="uid://da7b1t12qt303" path="res://juego3/assets/sonidos/error-09-206494.mp3" id="18_xy563"]
+[ext_resource type="AudioStream" uid="uid://dyq6fkloqs157" path="res://juego3/assets/sonidos/door-close-gain_01-93410.mp3" id="20_nfm7q"]
+[ext_resource type="AudioStream" uid="uid://doy3xylwc0glf" path="res://juego3/assets/sonidos/bell-ring-390294.mp3" id="20_xy563"]
+[ext_resource type="AudioStream" uid="uid://byj7dq5jtovoc" path="res://juego3/assets/sonidos/risa-nelson.mp3" id="21_nfm7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cem1i"]
+size = Vector2(123, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ls6g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0e7mp")
+}],
+"loop": true,
+"name": &"activada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rdvbt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcfjx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6owdy")
+}],
+"loop": true,
+"name": &"botiquin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_6owdy")
+}],
+"loop": true,
+"name": &"escopeta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_47fn5")
+}],
+"loop": true,
+"name": &"escudo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_e053v")
+}],
+"loop": true,
+"name": &"mp40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5ls6g")
+}],
+"loop": true,
+"name": &"municion_escopeta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7r4ep")
+}],
+"loop": true,
+"name": &"municion_mp40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_cem1i")
+}],
+"loop": true,
+"name": &"municion_revolver",
+"speed": 5.0
+}]
+
+[node name="Tienda" type="Node2D"]
+script = ExtResource("1_qmtjl")
+
+[node name="Tienda_municion" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tienda_municion"]
+position = Vector2(-0.5, 20.5)
+shape = SubResource("RectangleShape2D_cem1i")
+
+[node name="Sonido_compra" type="AudioStreamPlayer2D" parent="Tienda_municion"]
+stream = ExtResource("2_0bxgk")
+max_polyphony = 10
+bus = &"Efectos"
+
+[node name="Label_abrir_tienda" type="Label" parent="Tienda_municion"]
+visible = false
+offset_left = -77.0
+offset_top = -105.0
+offset_right = 91.0
+offset_bottom = -82.0
+theme_override_fonts/font = ExtResource("3_pxs42")
+text = "Pulsa   E   para   comprar"
+
+[node name="Sprites_tienda" type="AnimatedSprite2D" parent="Tienda_municion"]
+scale = Vector2(0.7748963, 0.72507703)
+sprite_frames = SubResource("SpriteFrames_5ls6g")
+
+[node name="Panel_tienda" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2.9999995, -173)
+scale = Vector2(0.8941518, 0.94247967)
+texture = ExtResource("6_rdvbt")
+
+[node name="Label_nombre" type="Label" parent="Panel_tienda"]
+texture_filter = 1
+offset_left = -131.66666
+offset_top = -81.66667
+offset_right = -22.666656
+offset_bottom = -32.66667
+theme_override_fonts/font = ExtResource("3_pxs42")
+theme_override_font_sizes/font_size = 14
+text = "Muinicion   de
+Revolver"
+
+[node name="Label_precio" type="Label" parent="Panel_tienda"]
+texture_filter = 1
+offset_left = 5.0
+offset_top = -88.33331
+offset_right = 86.0
+offset_bottom = -30.333313
+theme_override_fonts/font = ExtResource("3_pxs42")
+theme_override_font_sizes/font_size = 23
+text = "Precio:
+"
+
+[node name="Label_valor" type="Label" parent="Panel_tienda"]
+texture_filter = 1
+offset_left = 5.0
+offset_top = -46.666668
+offset_right = 86.0
+offset_bottom = 45.333332
+theme_override_colors/font_color = Color(0, 1, 0.03137255, 1)
+theme_override_fonts/font = ExtResource("3_pxs42")
+theme_override_font_sizes/font_size = 37
+text = "700€
+"
+
+[node name="Sprites_objetos" type="AnimatedSprite2D" parent="Panel_tienda"]
+position = Vector2(-92.4815, -10.000015)
+sprite_frames = SubResource("SpriteFrames_mcfjx")
+animation = &"escudo"
+
+[node name="Boton_izquierda" type="TextureButton" parent="Panel_tienda"]
+offset_left = -3.333332
+offset_top = 33.333336
+offset_right = 86.66667
+offset_bottom = 100.333336
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("8_5ls6g")
+texture_hover = ExtResource("15_g1idy")
+flip_h = true
+
+[node name="Boton_derecha" type="TextureButton" parent="Panel_tienda"]
+offset_left = 71.666664
+offset_top = 33.333336
+offset_right = 161.66666
+offset_bottom = 100.333336
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("8_5ls6g")
+texture_hover = ExtResource("15_g1idy")
+
+[node name="Boton_comprar" type="TextureButton" parent="Panel_tienda"]
+offset_left = -135.0
+offset_top = 33.333332
+offset_right = 22.0
+offset_bottom = 124.33333
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("9_7r4ep")
+texture_hover = ExtResource("17_2havg")
+
+[node name="Label_comprar" type="Label" parent="Panel_tienda/Boton_comprar"]
+layout_mode = 0
+offset_left = 33.333305
+offset_top = 29.899841
+offset_right = 125.333305
+offset_bottom = 54.89984
+theme_override_fonts/font = ExtResource("3_pxs42")
+theme_override_font_sizes/font_size = 24
+text = "Comprar"
+
+[node name="Boton_cerrar" type="TextureButton" parent="Panel_tienda"]
+offset_left = 125.25837
+offset_top = -88.06556
+offset_right = 218.25836
+offset_bottom = 2.9344406
+scale = Vector2(0.29130253, 0.25268757)
+texture_normal = ExtResource("15_e053v")
+
+[node name="Sonido_seleccion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_lqjb5")
+volume_db = -20.0
+bus = &"Efectos"
+
+[node name="Sonido_error_seleccion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_xy563")
+volume_db = -15.0
+bus = &"Efectos"
+
+[node name="Sonido_abrir_tienda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_xy563")
+volume_db = -5.0
+bus = &"Efectos"
+
+[node name="Sonido_cerrar_tienda" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_nfm7q")
+volume_db = -5.0
+bus = &"Efectos"
+
+[node name="Sonido_no_money" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_nfm7q")
+volume_db = -15.0
+bus = &"Efectos"
+
+[connection signal="area_entered" from="Tienda_municion" to="." method="habilitar_comprar"]
+[connection signal="area_exited" from="Tienda_municion" to="." method="habilitar_comprar"]
+[connection signal="pressed" from="Panel_tienda/Boton_izquierda" to="." method="objeto_izquierda"]
+[connection signal="pressed" from="Panel_tienda/Boton_derecha" to="." method="objeto_derecha"]
+[connection signal="pressed" from="Panel_tienda/Boton_comprar" to="." method="comprar"]
+[connection signal="pressed" from="Panel_tienda/Boton_cerrar" to="." method="cerrar_tienda"]

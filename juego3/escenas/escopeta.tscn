@@ -1,0 +1,187 @@
+[gd_scene load_steps=26 format=3 uid="uid://dj81cv8p5cx4p"]
+
+[ext_resource type="Script" uid="uid://c0l23q2xf20ja" path="res://juego3/scripts/escopeta.gd" id="1_70bc6"]
+[ext_resource type="Texture2D" uid="uid://u7bf4wuf7aj8" path="res://juego3/assets/animacion cocking escopeta/1.png" id="2_ktuwm"]
+[ext_resource type="Texture2D" uid="uid://bdj3vj0a03rkm" path="res://juego3/assets/animacion cocking escopeta/2.png" id="3_3jl01"]
+[ext_resource type="AudioStream" uid="uid://b15kubm22ascq" path="res://juego3/assets/sonidos/shell-load-87813.mp3" id="4_gbexm"]
+[ext_resource type="AudioStream" uid="uid://cvaxrs8f7psed" path="res://juego3/assets/sonidos/realistic-shotgun-cocking-sound-38640.mp3" id="4_p3mwe"]
+[ext_resource type="Texture2D" uid="uid://blmbs0os11x1" path="res://juego3/assets/animacion cocking escopeta/3.png" id="4_ri4le"]
+[ext_resource type="AudioStream" uid="uid://cecuqwvt73v6e" path="res://juego3/assets/sonidos/shotgun-146188.mp3" id="5_btx1s"]
+[ext_resource type="Texture2D" uid="uid://d4i0e54x2vq6n" path="res://juego3/assets/animacion cocking escopeta/4.png" id="5_sm5n0"]
+[ext_resource type="AudioStream" uid="uid://ri30e4vlyvvq" path="res://juego3/assets/sonidos/gun-dry-firing-9-96427.mp3" id="6_1a74j"]
+[ext_resource type="Texture2D" uid="uid://cv8wsa7jrqbgf" path="res://juego3/assets/animacion cocking escopeta/5.png" id="6_6le7v"]
+[ext_resource type="Texture2D" uid="uid://di4803stgrnly" path="res://juego3/assets/animacion cocking escopeta/6.png" id="7_dkk4x"]
+[ext_resource type="Texture2D" uid="uid://b6h8ipmtl0rah" path="res://juego3/assets/animacion cocking escopeta/7.png" id="8_d40qd"]
+[ext_resource type="Texture2D" uid="uid://ilc0l1537a6a" path="res://juego3/assets/animacion cocking escopeta/8.png" id="9_m2gf4"]
+[ext_resource type="Texture2D" uid="uid://dlx0u3taj760l" path="res://juego3/assets/animacion cocking escopeta/9.png" id="10_u40y7"]
+[ext_resource type="Texture2D" uid="uid://c4rglwt4te17c" path="res://juego3/assets/animacion cocking escopeta/10.png" id="11_m4juc"]
+[ext_resource type="Texture2D" uid="uid://cej1rkc2x4k7e" path="res://juego3/assets/animacion cocking escopeta/11.png" id="12_tywli"]
+[ext_resource type="Texture2D" uid="uid://dvfhvidrk6tgt" path="res://juego3/assets/animacion cocking escopeta/12.png" id="13_kcct4"]
+[ext_resource type="Texture2D" uid="uid://bkuv7pxws6p7k" path="res://juego3/assets/animacion cocking escopeta/13.png" id="14_wg5xk"]
+[ext_resource type="Texture2D" uid="uid://bf14ykyvtqudl" path="res://juego3/assets/animacion cocking escopeta/14.png" id="15_vtlgv"]
+[ext_resource type="Texture2D" uid="uid://cllj46jfb20xq" path="res://juego3/assets/animacion cocking escopeta/15.png" id="16_r6kmv"]
+[ext_resource type="Texture2D" uid="uid://c642yo2y2jxuf" path="res://juego3/assets/animacion cocking escopeta/16.png" id="17_ri4le"]
+[ext_resource type="Texture2D" uid="uid://c5fmmxqn6dygf" path="res://juego3/assets/escopeta2-ajustada.png" id="17_yuysk"]
+[ext_resource type="Texture2D" uid="uid://dhcdu22rubnwu" path="res://juego3/assets/animacion cocking escopeta/17.png" id="18_sm5n0"]
+[ext_resource type="Texture2D" uid="uid://d3cujga7bfm8d" path="res://juego3/assets/escopeta2-disparo.png" id="18_tx15o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56gry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ktuwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3jl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ri4le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sm5n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6le7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dkk4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d40qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m2gf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u40y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m4juc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tywli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kcct4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wg5xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vtlgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r6kmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ri4le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sm5n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ri4le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r6kmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vtlgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wg5xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kcct4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tywli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m4juc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u40y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m2gf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d40qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dkk4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6le7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sm5n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ri4le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3jl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ktuwm")
+}],
+"loop": false,
+"name": &"cocking",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_yuysk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tx15o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yuysk")
+}],
+"loop": false,
+"name": &"disparo",
+"speed": 6.0
+}]
+
+[node name="Escopeta" type="Node2D"]
+script = ExtResource("1_70bc6")
+
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -2)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_56gry")
+animation = &"cocking"
+offset = Vector2(62, 22)
+flip_h = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(122, -3)
+
+[node name="Sonido_recarga" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gbexm")
+volume_db = -5.0
+bus = &"Efectos"
+
+[node name="Sonido_cocking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p3mwe")
+volume_db = -15.0
+bus = &"Efectos"
+
+[node name="Sonido_disparo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_btx1s")
+volume_db = -10.0
+max_polyphony = 32
+bus = &"Efectos"
+
+[node name="Sonido_cargador_vacio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1a74j")
+bus = &"Efectos"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="timer_disparo"]

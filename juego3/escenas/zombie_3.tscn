@@ -1,0 +1,733 @@
+[gd_scene load_steps=102 format=3 uid="uid://nf7tf2vfbmf3"]
+
+[ext_resource type="Script" uid="uid://bx5svi6oml5re" path="res://juego3/scripts/zombie_3.gd" id="1_qjirh"]
+[ext_resource type="FontFile" uid="uid://5i2whqdwkxg" path="res://general/assets/ARCADECLASSIC.TTF" id="2_q8khf"]
+[ext_resource type="Texture2D" uid="uid://dsh4xs8igeywd" path="res://juego3/assets/zombie2-fusionado-ajustado.png" id="3_o3tw6"]
+[ext_resource type="Texture2D" uid="uid://bhb0cvhxjvsex" path="res://juego3/assets/animacion piernas  lento/1.png" id="3_ysgmj"]
+[ext_resource type="Texture2D" uid="uid://bwqmlnmt4ykki" path="res://juego3/assets/animacion piernas  lento/2.png" id="4_r16mk"]
+[ext_resource type="AudioStream" uid="uid://bu4g8xlyq2afl" path="res://juego2/assets/sonidos/hit-rock-01-266301.mp3" id="4_s0hfw"]
+[ext_resource type="Texture2D" uid="uid://b224y5uat3gdl" path="res://juego3/assets/animacion piernas  lento/3.png" id="5_o26o6"]
+[ext_resource type="AudioStream" uid="uid://doowxwltyxq6c" path="res://juego3/assets/sonidos/086230_headshotwav-40654.mp3" id="5_vytik"]
+[ext_resource type="Texture2D" uid="uid://gpshm7eomt2s" path="res://juego3/assets/animacion piernas  lento/4.png" id="6_btaa8"]
+[ext_resource type="AudioStream" uid="uid://c172smx0rtgjt" path="res://juego3/assets/sonidos/growling-zombie-104988.mp3" id="6_ghs0o"]
+[ext_resource type="Texture2D" uid="uid://bomxivfyuvrer" path="res://juego3/assets/animacion piernas  lento/5.png" id="7_6m0gw"]
+[ext_resource type="AudioStream" uid="uid://bxhtfs7air4vn" path="res://juego3/assets/sonidos/zombie-groan-95051.mp3" id="7_idoxi"]
+[ext_resource type="Texture2D" uid="uid://dhqbhtgy2oxdc" path="res://juego3/assets/animacion piernas  lento/6.png" id="8_hvu5e"]
+[ext_resource type="AudioStream" uid="uid://whifxwerr5t0" path="res://juego3/assets/sonidos/zombie-roar-7-90409.mp3" id="8_rapfk"]
+[ext_resource type="Texture2D" uid="uid://cpmwepyyodroi" path="res://juego3/assets/animacion piernas  lento/7.png" id="9_oxwcw"]
+[ext_resource type="Texture2D" uid="uid://ddx72j6drksdy" path="res://juego3/assets/animacion piernas  lento/8.png" id="10_4dw51"]
+[ext_resource type="Texture2D" uid="uid://rdiycmxrnls6" path="res://juego3/assets/animacion piernas  lento/9.png" id="11_dv0da"]
+[ext_resource type="Texture2D" uid="uid://doh5xe1waeq30" path="res://juego3/assets/animacion piernas  lento/10.png" id="12_dos3x"]
+[ext_resource type="Texture2D" uid="uid://c2neiotsefvvx" path="res://juego3/assets/animacion piernas  lento/11.png" id="13_gqo04"]
+[ext_resource type="Texture2D" uid="uid://d1q5eahs6hxpq" path="res://juego3/assets/animacion piernas  lento/12.png" id="14_w5d7k"]
+[ext_resource type="Texture2D" uid="uid://dj3ejmk6hmawq" path="res://juego3/assets/animacion piernas  lento/13.png" id="15_l48hv"]
+[ext_resource type="Texture2D" uid="uid://dluvde7p7l2tm" path="res://juego3/assets/animacion piernas  lento/14.png" id="16_6kwuj"]
+[ext_resource type="Texture2D" uid="uid://bmiguc54sp27q" path="res://juego3/assets/animacion piernas  lento/15.png" id="17_c8i81"]
+[ext_resource type="Texture2D" uid="uid://b8vlg46uwnlqq" path="res://juego3/assets/animacion piernas  lento/16.png" id="18_x8okl"]
+[ext_resource type="Texture2D" uid="uid://nmbvelvh5515" path="res://juego3/assets/animacion piernas  lento/17.png" id="19_kgxoo"]
+[ext_resource type="Texture2D" uid="uid://hnbjt6rigxws" path="res://juego3/assets/animacion piernas  lento/18.png" id="20_f8ss1"]
+[ext_resource type="Texture2D" uid="uid://b1sqp0ffwgtgt" path="res://juego3/assets/animacion cabeza/1.png" id="21_jwxgn"]
+[ext_resource type="Texture2D" uid="uid://bneyuyiak0l6v" path="res://juego3/assets/animacion cabeza/2.png" id="22_cdotg"]
+[ext_resource type="Texture2D" uid="uid://dikrd5xtj0bqh" path="res://juego3/assets/animacion cabeza/3.png" id="23_e5wkm"]
+[ext_resource type="Texture2D" uid="uid://cjbcve61rip50" path="res://juego3/assets/animacion cabeza/4.png" id="24_comdo"]
+[ext_resource type="Texture2D" uid="uid://2jig2uxvvt83" path="res://juego3/assets/animacion cabeza/5.png" id="25_h12t5"]
+[ext_resource type="Texture2D" uid="uid://6wntnkmn46uv" path="res://juego3/assets/animacion cabeza/6.png" id="26_c714y"]
+[ext_resource type="Texture2D" uid="uid://dwmtg1e5pi06h" path="res://juego3/assets/animacion cabeza/7.png" id="27_px6jg"]
+[ext_resource type="Texture2D" uid="uid://ci5bkykdhl3bv" path="res://juego3/assets/animacion cabeza/8.png" id="28_1wfhs"]
+[ext_resource type="Texture2D" uid="uid://bnp2yi0eu3j8x" path="res://juego3/assets/animacion cabeza explotando/1.png" id="29_wkgym"]
+[ext_resource type="Texture2D" uid="uid://bd0lfekutjv1n" path="res://juego3/assets/animacion cabeza explotando/2.png" id="30_7m8by"]
+[ext_resource type="Texture2D" uid="uid://cvthqfgu3xtmf" path="res://juego3/assets/animacion cabeza explotando/3.png" id="31_51w75"]
+[ext_resource type="Texture2D" uid="uid://bc7rxoqiimxyc" path="res://juego3/assets/animacion cabeza explotando/4.png" id="32_cf3de"]
+[ext_resource type="Texture2D" uid="uid://dqjbv7ywdrdsq" path="res://juego3/assets/animacion cabeza explotando/5.png" id="33_h7d0d"]
+[ext_resource type="Texture2D" uid="uid://cpcfaa4arbpd6" path="res://juego3/assets/animacion cabeza explotando/6.png" id="34_nf0mk"]
+[ext_resource type="Texture2D" uid="uid://qm4js0u0yiq8" path="res://juego3/assets/animacion cabeza explotando/7.png" id="35_1t30j"]
+[ext_resource type="Texture2D" uid="uid://c8x8344fkd6rv" path="res://juego3/assets/animacion cabeza explotando/8.png" id="36_iva4x"]
+[ext_resource type="Texture2D" uid="uid://dvv6eryevw7wi" path="res://juego3/assets/animacion cabeza explotando/9.png" id="37_q4d8j"]
+[ext_resource type="Texture2D" uid="uid://c4u2lgm84tgn7" path="res://juego3/assets/animacion cabeza explotando/10.png" id="38_mq07k"]
+[ext_resource type="Texture2D" uid="uid://dcdopc6wsr608" path="res://juego3/assets/animacion cabeza explotando/11.png" id="39_8qhmc"]
+[ext_resource type="Texture2D" uid="uid://bhw8ovkqoyxi3" path="res://juego3/assets/animacion cabeza explotando/12.png" id="40_1ghpr"]
+[ext_resource type="Texture2D" uid="uid://d3a5mpthchr3y" path="res://juego3/assets/animacion cabeza explotando/13.png" id="41_85qqa"]
+[ext_resource type="Texture2D" uid="uid://d0o1v3iflyssg" path="res://juego3/assets/animacion cabeza explotando/14.png" id="42_pd6dg"]
+[ext_resource type="Texture2D" uid="uid://bs7iir2ij1hhd" path="res://juego3/assets/animacion cabeza explotando/15.png" id="43_2vy3l"]
+[ext_resource type="Texture2D" uid="uid://bny6eyl747dp" path="res://juego3/assets/animacion cabeza explotando/16.png" id="44_ja7uv"]
+[ext_resource type="Texture2D" uid="uid://ci57codf1aqqo" path="res://juego3/assets/animacion cabeza explotando/17.png" id="45_e3h5c"]
+[ext_resource type="Texture2D" uid="uid://m5uwkvg4iau1" path="res://juego3/assets/animacion cabeza explotando/18.png" id="46_x1su8"]
+[ext_resource type="Texture2D" uid="uid://pqfk7dn7c7po" path="res://juego3/assets/animacion cabeza explotando/19.png" id="47_448lt"]
+[ext_resource type="Texture2D" uid="uid://c7a2quk60jg8p" path="res://juego3/assets/animacion cabeza explotando/20.png" id="48_f0kg7"]
+[ext_resource type="Texture2D" uid="uid://bxjpu6y2n4yq2" path="res://juego3/assets/animacion cabeza explotando/21.png" id="49_ykpbr"]
+[ext_resource type="Texture2D" uid="uid://0ubrp7241um" path="res://juego3/assets/animacion cabeza explotando/22.png" id="50_sjlmx"]
+[ext_resource type="Texture2D" uid="uid://dcs7w7kyenofa" path="res://juego3/assets/animacion cabeza explotando/23.png" id="51_1uu71"]
+[ext_resource type="Texture2D" uid="uid://fm7tfj5hv5k" path="res://juego3/assets/animacion cabeza explotando/24.png" id="52_sek3m"]
+[ext_resource type="Texture2D" uid="uid://cjuguif38l5ws" path="res://juego3/assets/animacion cabeza explotando/25.png" id="53_rghy4"]
+[ext_resource type="Texture2D" uid="uid://84kfbq5gmav6" path="res://juego3/assets/animacion cabeza explotando/26.png" id="54_i7awv"]
+[ext_resource type="Texture2D" uid="uid://bfnpebs2cr50s" path="res://juego3/assets/animacion cabeza explotando/27.png" id="55_lswpf"]
+[ext_resource type="Texture2D" uid="uid://b141d63bdx8c7" path="res://juego3/assets/animacion cabeza explotando/28.png" id="56_kxy2n"]
+[ext_resource type="Texture2D" uid="uid://crho2cun18dtq" path="res://juego3/assets/animacion cabeza explotando/29.png" id="57_eus6c"]
+[ext_resource type="Texture2D" uid="uid://cl7elcrnjqu6f" path="res://juego3/assets/animacion cabeza explotando/30.png" id="58_cff5v"]
+[ext_resource type="Texture2D" uid="uid://d4as7p0dcj35w" path="res://juego3/assets/animacion cabeza explotando/31.png" id="59_u3nuw"]
+[ext_resource type="Texture2D" uid="uid://bamko6r4pvknn" path="res://juego3/assets/animacion cabeza explotando/32.png" id="60_xsaaq"]
+[ext_resource type="Texture2D" uid="uid://bdvd15alli67f" path="res://juego3/assets/animacion cabeza explotando/33.png" id="61_8rm84"]
+[ext_resource type="Texture2D" uid="uid://2hsrpa0ubbpe" path="res://juego3/assets/animacion cabeza explotando/34.png" id="62_0o28u"]
+[ext_resource type="Texture2D" uid="uid://b1w5j57eivvjo" path="res://juego3/assets/animacion cabeza explotando/35.png" id="63_0po4p"]
+[ext_resource type="Texture2D" uid="uid://dyi5ajg5bao5u" path="res://juego3/assets/animacion cabeza explotando/36.png" id="64_yn201"]
+[ext_resource type="Texture2D" uid="uid://bs51fhqslf8f8" path="res://juego3/assets/animacion cabeza explotando/37.png" id="65_ck3td"]
+[ext_resource type="Texture2D" uid="uid://08dyikylk8xy" path="res://juego3/assets/animacion cabeza explotando/38.png" id="66_33ise"]
+[ext_resource type="Texture2D" uid="uid://bbmecddwlppq2" path="res://juego3/assets/animacion cabeza explotando/39.png" id="67_m6thd"]
+[ext_resource type="Texture2D" uid="uid://c2diam0r5ea5c" path="res://juego3/assets/animacion cabeza explotando/40.png" id="68_e1sv2"]
+[ext_resource type="Texture2D" uid="uid://c4aypsl23c02h" path="res://juego3/assets/animacion cabeza explotando/41.png" id="69_ji7jy"]
+[ext_resource type="Texture2D" uid="uid://uepgq02gsdfj" path="res://juego3/assets/animacion cabeza explotando/42.png" id="70_yx2sb"]
+[ext_resource type="Texture2D" uid="uid://dr7v0ai3d7ney" path="res://juego3/assets/animacion cabeza explotando/43.png" id="71_7y6kq"]
+[ext_resource type="Texture2D" uid="uid://bcdgwhydmfq4b" path="res://juego3/assets/animacion cabeza explotando/44.png" id="72_4gr2p"]
+[ext_resource type="Texture2D" uid="uid://dqy3su4ksq2g" path="res://juego3/assets/animacion cabeza explotando/45.png" id="73_4h24w"]
+[ext_resource type="Texture2D" uid="uid://cmq41c5oq7803" path="res://juego3/assets/animacion cabeza explotando/46.png" id="74_euxmg"]
+[ext_resource type="Texture2D" uid="uid://ddy1hwrjljjss" path="res://juego3/assets/animacion cuerpo basica/1.png" id="75_frh4f"]
+[ext_resource type="Texture2D" uid="uid://8xkqlqptkaqh" path="res://juego3/assets/animacion cuerpo basica/2.png" id="76_qu0o3"]
+[ext_resource type="Texture2D" uid="uid://cemn70ddtxrc3" path="res://juego3/assets/animacion cuerpo basica/3.png" id="77_w8too"]
+[ext_resource type="Texture2D" uid="uid://uly8ovhmw0f" path="res://juego3/assets/animacion cuerpo basica/4.png" id="78_u0kwd"]
+[ext_resource type="Texture2D" uid="uid://c3dme28gtmbnf" path="res://juego3/assets/animacion cuerpo basica/5.png" id="79_xw1es"]
+[ext_resource type="Texture2D" uid="uid://dyhnqe2rx4gnx" path="res://juego3/assets/animacion cuerpo basica/6.png" id="80_3g16k"]
+[ext_resource type="Texture2D" uid="uid://rf26xbc3vslm" path="res://juego3/assets/animacion cuerpo basica/7.png" id="81_3uptd"]
+[ext_resource type="Texture2D" uid="uid://wh8nptm7iwuw" path="res://juego3/assets/animacion cuerpo basica/8.png" id="82_b0gx5"]
+
+[sub_resource type="Animation" id="Animation_nwxn5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fer63"]
+resource_name = "dinero"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-21, -65), Vector2(-21, -96)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_2ijhm"]
+resource_name = "dinero_invertido"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, -65), Vector2(-13, -97)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yepy"]
+_data = {
+&"RESET": SubResource("Animation_nwxn5"),
+&"dinero": SubResource("Animation_fer63"),
+&"dinero_invertido": SubResource("Animation_2ijhm")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcmwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ysgmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r16mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o26o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_btaa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6m0gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hvu5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oxwcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4dw51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dv0da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dos3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gqo04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w5d7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l48hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6kwuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8i81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_x8okl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kgxoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_f8ss1")
+}],
+"loop": true,
+"name": &"lento",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kttuf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_jwxgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cdotg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_e5wkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_comdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_h12t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c714y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_px6jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1wfhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1wfhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_px6jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c714y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_h12t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_comdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_e5wkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cdotg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jwxgn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_euxmg")
+}],
+"loop": true,
+"name": &"explotada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wkgym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7m8by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_51w75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cf3de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h7d0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_nf0mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_1t30j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_iva4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_q4d8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mq07k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_8qhmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1ghpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_85qqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_pd6dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_2vy3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ja7uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_e3h5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_x1su8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_448lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_f0kg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ykpbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sjlmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_1uu71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_sek3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rghy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_i7awv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_lswpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_kxy2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_eus6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_cff5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_u3nuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_xsaaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8rm84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_0o28u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_0po4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yn201")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ck3td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_33ise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_m6thd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_e1sv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ji7jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yx2sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_7y6kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_4gr2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_4h24w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_euxmg")
+}],
+"loop": false,
+"name": &"explotando",
+"speed": 120.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7shc1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("75_frh4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_qu0o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_w8too")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_u0kwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_xw1es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3g16k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3uptd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_b0gx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_b0gx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3uptd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3g16k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_xw1es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_u0kwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_w8too")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_qu0o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_frh4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="Animation" id="Animation_qjirh"]
+resource_name = "muerte"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Soporte_animaciones:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-48.000008, 34.000004)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Soporte_animaciones:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5562588]
+}
+
+[sub_resource type="Animation" id="Animation_jwxgn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Soporte_animaciones:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Soporte_animaciones:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cdotg"]
+resource_name = "muerte_invertida"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Soporte_animaciones:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(57, 42)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Soporte_animaciones:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5822656]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cdotg"]
+_data = {
+&"RESET": SubResource("Animation_jwxgn"),
+&"muerte": SubResource("Animation_qjirh"),
+&"muerte_invertida": SubResource("Animation_cdotg")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i7lj"]
+size = Vector2(33, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bj4pq"]
+size = Vector2(23, 28)
+
+[node name="Zombie1" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 29
+collision_mask = 5
+script = ExtResource("1_qjirh")
+
+[node name="Dinero" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -13.0
+offset_top = -97.0
+offset_right = 14.0
+offset_bottom = -69.0
+theme_override_colors/font_color = Color(0.03137255, 1, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("2_q8khf")
+theme_override_font_sizes/font_size = 12
+text = "+50€"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dinero"]
+libraries = {
+&"": SubResource("AnimationLibrary_5yepy")
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Soporte_animaciones" type="Sprite2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Animacion_piernas" type="AnimatedSprite2D" parent="Soporte_animaciones"]
+position = Vector2(-3, 33)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_mcmwi")
+animation = &"lento"
+autoplay = "lento"
+frame_progress = 0.864724
+
+[node name="Animacion_cabeza" type="AnimatedSprite2D" parent="Soporte_animaciones"]
+position = Vector2(-6.0000005, -46)
+scale = Vector2(0.17, 0.17)
+sprite_frames = SubResource("SpriteFrames_kttuf")
+animation = &"explotada"
+autoplay = "default"
+
+[node name="Animacion_cuerpo" type="AnimatedSprite2D" parent="Soporte_animaciones"]
+position = Vector2(-3.0000002, -14.000001)
+scale = Vector2(0.17, 0.17)
+sprite_frames = SubResource("SpriteFrames_7shc1")
+autoplay = "default"
+frame_progress = 0.44468987
+
+[node name="Animacion_muerte" type="AnimationPlayer" parent="Soporte_animaciones"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_cdotg")
+}
+
+[node name="Textura_zombie" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_o3tw6")
+
+[node name="Hitbox_cuerpo" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cuerpo"]
+position = Vector2(-7.5, 14.5)
+shape = SubResource("RectangleShape2D_8i7lj")
+
+[node name="Hitbox_cuerpo_invertida" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cuerpo_invertida"]
+position = Vector2(3.5, 14.5)
+shape = SubResource("RectangleShape2D_8i7lj")
+
+[node name="Hitbox_cabeza" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cabeza"]
+position = Vector2(-5.5, -47)
+shape = SubResource("RectangleShape2D_bj4pq")
+
+[node name="Hitbox_cabeza_invertida" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_cabeza_invertida"]
+position = Vector2(0.5, -47)
+shape = SubResource("RectangleShape2D_bj4pq")
+
+[node name="Sonido_impacto_cuerpo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_s0hfw")
+
+[node name="Sonido_headshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vytik")
+
+[node name="Animacion_ataque" type="AnimatedSprite2D" parent="."]
+
+[node name="Sonido_rugido1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ghs0o")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_rugido2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_idoxi")
+bus = &"Efectos"
+
+[node name="Sonido_rugido3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_rapfk")
+bus = &"Efectos"
+
+[node name="Timer_ataque" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Timer_rugido" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="area_entered" from="Hitbox_cuerpo" to="." method="disparo_cuerpo"]
+[connection signal="body_entered" from="Hitbox_cuerpo" to="." method="ataque"]
+[connection signal="body_entered" from="Hitbox_cuerpo" to="." method="disparo_cuerpo"]
+[connection signal="body_exited" from="Hitbox_cuerpo" to="." method="ataque"]
+[connection signal="area_entered" from="Hitbox_cuerpo_invertida" to="." method="disparo_cuerpo"]
+[connection signal="body_entered" from="Hitbox_cuerpo_invertida" to="." method="disparo_cuerpo"]
+[connection signal="area_entered" from="Hitbox_cabeza" to="." method="disparo_cabeza"]
+[connection signal="body_entered" from="Hitbox_cabeza" to="." method="disparo_cabeza"]
+[connection signal="area_entered" from="Hitbox_cabeza_invertida" to="." method="disparo_cabeza"]
+[connection signal="body_entered" from="Hitbox_cabeza_invertida" to="." method="disparo_cabeza"]
+[connection signal="timeout" from="Timer_ataque" to="." method="confirmar_ataque"]
+[connection signal="timeout" from="Timer_rugido" to="." method="rugir"]

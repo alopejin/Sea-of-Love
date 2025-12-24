@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp6thjjox7dsj"]
+
+[ext_resource type="Script" uid="uid://ohfugt5pv5y5" path="res://juego3/scripts/revolver_2.gd" id="1_m0omq"]
+[ext_resource type="Texture2D" uid="uid://ccd1fbur5iuj5" path="res://juego3/assets/revolver.png" id="1_mejge"]
+[ext_resource type="AudioStream" uid="uid://b15nhws45vu6s" path="res://juego3/assets/sonidos/clean-revolver-reload-6889.mp3" id="3_l8qtq"]
+[ext_resource type="AudioStream" uid="uid://n6uig76g87h3" path="res://juego3/assets/sonidos/Gunshot Sound Effect Single Shot [lGNwnstqAO4].mp3" id="4_xk03k"]
+[ext_resource type="AudioStream" uid="uid://ri30e4vlyvvq" path="res://juego3/assets/sonidos/gun-dry-firing-9-96427.mp3" id="5_1l244"]
+[ext_resource type="Texture2D" uid="uid://bdssxxrgyj7wc" path="res://juego3/assets/revolver_disparando.png" id="6_l0qjf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ac4c0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mejge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l0qjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_mejge")
+}],
+"loop": false,
+"name": &"disparo",
+"speed": 10.0
+}]
+
+[node name="Revolver" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_m0omq")
+
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ac4c0")
+animation = &"disparo"
+frame = 2
+frame_progress = 1.0
+offset = Vector2(19, 0)
+flip_h = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(38, -10)
+
+[node name="Sonido_recarga" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l8qtq")
+volume_db = -10.0
+bus = &"Efectos"
+
+[node name="Sonido_disparo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xk03k")
+volume_db = -20.0
+max_polyphony = 6
+bus = &"Efectos"
+
+[node name="Sonido_cargador_vacio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1l244")
+max_polyphony = 6
+bus = &"Efectos"

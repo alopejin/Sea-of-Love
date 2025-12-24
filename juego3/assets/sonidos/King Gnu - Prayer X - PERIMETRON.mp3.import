@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dewecqnn1sobg"
+path="res://.godot/imported/King Gnu - Prayer X - PERIMETRON.mp3-2513a26f01e561008892a7681fce72f8.mp3str"
+
+[deps]
+
+source_file="res://juego3/assets/sonidos/King Gnu - Prayer X - PERIMETRON.mp3"
+dest_files=["res://.godot/imported/King Gnu - Prayer X - PERIMETRON.mp3-2513a26f01e561008892a7681fce72f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
