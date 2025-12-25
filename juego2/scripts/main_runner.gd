@@ -3,7 +3,7 @@ extends Node
 
 const POSICION_INICIAL_MAR := Vector2i(163.0, 417.0)
 const POSICION_INICIAL_CAMARA := Vector2i(0, 0)
-const VELOCIDAD_INICIAL : float = 4#2.0
+const VELOCIDAD_INICIAL : float = 4.0#2.0
 const VELOCIDAD_MAX : int = 10#5
 const ACELERACION : int = 4000#6000
 const VELOCIDAD_CIGARRO = -4000#-2000
