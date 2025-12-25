@@ -3,10 +3,10 @@ extends Node
 
 const POSICION_INICIAL_MAR := Vector2i(163.0, 417.0)
 const POSICION_INICIAL_CAMARA := Vector2i(0, 0)
-const VELOCIDAD_INICIAL : float = 2.0
-const VELOCIDAD_MAX : int = 5
-const ACELERACION : int = 6000
-const VELOCIDAD_CIGARRO = -2000
+const VELOCIDAD_INICIAL : float = 4#2.0
+const VELOCIDAD_MAX : int = 10#5
+const ACELERACION : int = 4000#6000
+const VELOCIDAD_CIGARRO = -4000#-2000
 
 var velocidad : float
 var tamaño_pantalla : Vector2i
@@ -28,6 +28,7 @@ var puede_crear
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Engine.max_fps = 120
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Global.intro = false
 	desactivar_botones()
@@ -66,19 +67,21 @@ func nuevo_juego():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(juego_activo):
+		print(velocidad)
 		generar_obstaculos()
 		
 		if puntuacion_jugador/100 > 100:
 			generar_cigarros()
 		
-		velocidad = VELOCIDAD_INICIAL + movimiento / ACELERACION 
-		puntuacion_jugador += velocidad - 1
+		velocidad = VELOCIDAD_INICIAL + movimiento / ACELERACION
+		puntuacion_jugador += velocidad - 2#1
 		
 		if velocidad > VELOCIDAD_MAX:
 			velocidad = VELOCIDAD_MAX
-		$mar_runner.position.x += velocidad
-		$camara.position.x += velocidad
-		movimiento += velocidad
+			
+		$mar_runner.position.x += velocidad# * delta
+		$camara.position.x += velocidad# * delta
+		movimiento += velocidad# * delta
 		mostrar_puntuacion()
 		
 		if $camara.position.x - $suelo_runner.position.x > tamaño_pantalla.x:
